@@ -9,53 +9,37 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
+  interface PyroPresentation {}
+  interface PyroSlide {}
 }
 
 declare global {
 
 
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  interface HTMLPyroPresentationElement extends Components.PyroPresentation, HTMLStencilElement {}
+  var HTMLPyroPresentationElement: {
+    prototype: HTMLPyroPresentationElement;
+    new (): HTMLPyroPresentationElement;
+  };
+
+  interface HTMLPyroSlideElement extends Components.PyroSlide, HTMLStencilElement {}
+  var HTMLPyroSlideElement: {
+    prototype: HTMLPyroSlideElement;
+    new (): HTMLPyroSlideElement;
   };
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'pyro-presentation': HTMLPyroPresentationElement;
+    'pyro-slide': HTMLPyroSlideElement;
   }
 }
 
 declare namespace LocalJSX {
-  interface MyComponent extends JSXBase.HTMLAttributes<HTMLMyComponentElement> {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
+  interface PyroPresentation extends JSXBase.HTMLAttributes<HTMLPyroPresentationElement> {}
+  interface PyroSlide extends JSXBase.HTMLAttributes<HTMLPyroSlideElement> {}
 
   interface IntrinsicElements {
-    'my-component': MyComponent;
+    'pyro-presentation': PyroPresentation;
+    'pyro-slide': PyroSlide;
   }
 }
 
