@@ -9,7 +9,7 @@ export class Slide {
     return (
       <Host>
         <pyro-slide-content>
-          <slot></slot>
+          <slot />
         </pyro-slide-content>
       </Host>
     );

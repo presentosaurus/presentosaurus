@@ -11,7 +11,6 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 export namespace Components {
   interface PyroPresentation {}
   interface PyroSlide {}
-  interface PyroSlideContent {}
 }
 
 declare global {
@@ -28,28 +27,19 @@ declare global {
     prototype: HTMLPyroSlideElement;
     new (): HTMLPyroSlideElement;
   };
-
-  interface HTMLPyroSlideContentElement extends Components.PyroSlideContent, HTMLStencilElement {}
-  var HTMLPyroSlideContentElement: {
-    prototype: HTMLPyroSlideContentElement;
-    new (): HTMLPyroSlideContentElement;
-  };
   interface HTMLElementTagNameMap {
     'pyro-presentation': HTMLPyroPresentationElement;
     'pyro-slide': HTMLPyroSlideElement;
-    'pyro-slide-content': HTMLPyroSlideContentElement;
   }
 }
 
 declare namespace LocalJSX {
   interface PyroPresentation extends JSXBase.HTMLAttributes<HTMLPyroPresentationElement> {}
   interface PyroSlide extends JSXBase.HTMLAttributes<HTMLPyroSlideElement> {}
-  interface PyroSlideContent extends JSXBase.HTMLAttributes<HTMLPyroSlideContentElement> {}
 
   interface IntrinsicElements {
     'pyro-presentation': PyroPresentation;
     'pyro-slide': PyroSlide;
-    'pyro-slide-content': PyroSlideContent;
   }
 }
 

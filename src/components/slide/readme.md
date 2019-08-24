@@ -5,19 +5,6 @@
 <!-- Auto Generated Below -->
 
 
-## Dependencies
-
-### Depends on
-
-- [pyro-slide-content](../slide-content)
-
-### Graph
-```mermaid
-graph TD;
-  pyro-slide --> pyro-slide-content
-  style pyro-slide fill:#f9f,stroke:#333,stroke-width:4px
-```
-
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
