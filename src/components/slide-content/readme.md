@@ -1,4 +1,4 @@
-# pyro-slide
+# pyro-slide-content
 
 
 
@@ -7,15 +7,15 @@
 
 ## Dependencies
 
-### Depends on
+### Used by
 
-- [pyro-slide-content](../slide-content)
+ - [pyro-slide](../slide)
 
 ### Graph
 ```mermaid
 graph TD;
   pyro-slide --> pyro-slide-content
-  style pyro-slide fill:#f9f,stroke:#333,stroke-width:4px
+  style pyro-slide-content fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------
