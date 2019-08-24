@@ -2,8 +2,7 @@ import { Component, h, Host } from "@stencil/core";
 
 @Component({
   tag: "pyro-slide-content",
-  styleUrl: "slide-content.css",
-  shadow: true
+  styleUrl: "slide-content.css"
 })
 export class SlideContent {
   render() {

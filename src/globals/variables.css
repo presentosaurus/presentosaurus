@@ -1,4 +1,9 @@
+body {
+  margin: 0;
+}
+
 :root {
   --slide-content-width: 960px;
   --slide-content-height: 700px;
+  --slide-content-padding: 50px;
 }
