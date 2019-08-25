@@ -9,8 +9,14 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
-  interface PyroPresentation {}
-  interface PyroSlide {}
+  interface PyroPresentation {
+    'author': string;
+    'presentationTitle': string;
+    'subtitle': string;
+  }
+  interface PyroSlide {
+    'slideTitle': string;
+  }
 }
 
 declare global {
@@ -34,8 +40,14 @@ declare global {
 }
 
 declare namespace LocalJSX {
-  interface PyroPresentation extends JSXBase.HTMLAttributes<HTMLPyroPresentationElement> {}
-  interface PyroSlide extends JSXBase.HTMLAttributes<HTMLPyroSlideElement> {}
+  interface PyroPresentation extends JSXBase.HTMLAttributes<HTMLPyroPresentationElement> {
+    'author'?: string;
+    'presentationTitle'?: string;
+    'subtitle'?: string;
+  }
+  interface PyroSlide extends JSXBase.HTMLAttributes<HTMLPyroSlideElement> {
+    'slideTitle'?: string;
+  }
 
   interface IntrinsicElements {
     'pyro-presentation': PyroPresentation;
