@@ -2,8 +2,21 @@ body {
   margin: 0;
 }
 
-:root {
+:root,
+[data-theme="light"] {
   --slide-content-width: 960px;
   --slide-content-height: 700px;
   --slide-content-padding: 50px;
+
+  --color-text-primary: #000000de;
+  --color-text-secondary: #00000099;
+  --color-text-tertiary: #00000061;
+  --color-background: #ffffff;
+}
+
+[data-theme="dark"] {
+  --color-text-primary: #ffffffde;
+  --color-text-secondary: #ffffff99;
+  --color-text-tertiary: #ffffff61;
+  --color-background: #121212;
 }

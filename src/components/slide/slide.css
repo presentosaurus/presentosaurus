@@ -5,6 +5,8 @@ pyro-slide {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
 }
 
 pyro-slide-content {
