@@ -1,12 +1,15 @@
 pyro-slide {
-  display: block;
+  display: none;
   width: 100vw;
   height: 100vh;
-  display: flex;
   align-items: center;
   justify-content: center;
   color: var(--color-text-primary);
   background-color: var(--color-background);
+}
+
+pyro-slide.active {
+  display: flex;
 }
 
 pyro-slide-content {
