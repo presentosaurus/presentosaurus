@@ -15,7 +15,7 @@ pyro-slide.active {
 pyro-slide-content {
   display: block;
   box-sizing: border-box;
-  width: var(--slide-content-width);
-  height: var(--slide-content-height);
-  padding: var(--slide-content-padding);
+  height: 20rem;
+  width: calc(20rem * 16 / 9);
+  padding: 1rem;
 }
