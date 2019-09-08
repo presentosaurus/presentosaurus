@@ -1,5 +1,8 @@
 pyro-slide {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
   width: 100vw;
   height: 100vh;
   align-items: center;
@@ -9,14 +12,31 @@ pyro-slide {
   font-size: 4rem;
 }
 
-pyro-slide.active {
-  display: flex;
+pyro-slide.hydrated {
+  visibility: hidden;
+}
+
+pyro-slide.active.hydrated {
+  visibility: visible;
 }
 
 pyro-slide-content {
   display: block;
+  position: relative;
   box-sizing: border-box;
   height: 100rem;
   width: calc(100rem * 16 / 9);
-  padding: 8rem;
+  padding: var(--slide-content-padding);
+}
+
+pyro-presentation[numbering] > pyro-slide > pyro-slide-content::after {
+  counter-increment: slidenumber;
+  content: counter(slidenumber);
+  position: absolute;
+  bottom: var(--slide-content-padding);
+  right: var(--slide-content-padding);
+}
+
+pyro-slide[no-number] > pyro-slide-content::after {
+  display: none;
 }

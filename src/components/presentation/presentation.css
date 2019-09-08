@@ -1,3 +1,4 @@
 pyro-presentation {
   display: block;
+  counter-reset: slidenumber;
 }

@@ -4,6 +4,7 @@ body {
 
 :root,
 [data-theme="light"] {
+  --slide-content-padding: 8rem;
   --color-text-primary: #000000de;
   --color-text-secondary: #00000099;
   --color-text-tertiary: #00000061;

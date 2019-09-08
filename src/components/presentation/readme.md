@@ -7,11 +7,12 @@
 
 ## Properties
 
-| Property            | Attribute            | Description | Type     | Default     |
-| ------------------- | -------------------- | ----------- | -------- | ----------- |
-| `author`            | `author`             |             | `string` | `undefined` |
-| `presentationTitle` | `presentation-title` |             | `string` | `undefined` |
-| `subtitle`          | `subtitle`           |             | `string` | `undefined` |
+| Property            | Attribute            | Description | Type      | Default     |
+| ------------------- | -------------------- | ----------- | --------- | ----------- |
+| `author`            | `author`             |             | `string`  | `undefined` |
+| `numbering`         | `numbering`          |             | `boolean` | `undefined` |
+| `presentationTitle` | `presentation-title` |             | `string`  | `undefined` |
+| `subtitle`          | `subtitle`           |             | `string`  | `undefined` |
 
 
 ## Dependencies

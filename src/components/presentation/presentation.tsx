@@ -8,6 +8,7 @@ export class Presentation {
   @Prop() presentationTitle: string;
   @Prop() subtitle: string;
   @Prop() author: string;
+  @Prop() numbering: boolean;
 
   @State() activeIndex: number = 0;
 
@@ -61,7 +62,7 @@ export class Presentation {
   render() {
     return (
       <Host>
-        <pyro-slide>
+        <pyro-slide no-number>
           <div>
             <slot name="presentation-title">
               <h1>{this.presentationTitle}</h1>

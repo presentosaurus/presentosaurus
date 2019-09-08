@@ -11,6 +11,7 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 export namespace Components {
   interface PyroPresentation {
     'author': string;
+    'numbering': boolean;
     'presentationTitle': string;
     'subtitle': string;
   }
@@ -42,6 +43,7 @@ declare global {
 declare namespace LocalJSX {
   interface PyroPresentation extends JSXBase.HTMLAttributes<HTMLPyroPresentationElement> {
     'author'?: string;
+    'numbering'?: boolean;
     'presentationTitle'?: string;
     'subtitle'?: string;
   }
