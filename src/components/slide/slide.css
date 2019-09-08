@@ -6,6 +6,7 @@ pyro-slide {
   justify-content: center;
   color: var(--color-text-primary);
   background-color: var(--color-background);
+  font-size: 4rem;
 }
 
 pyro-slide.active {
@@ -15,7 +16,7 @@ pyro-slide.active {
 pyro-slide-content {
   display: block;
   box-sizing: border-box;
-  height: 20rem;
-  width: calc(20rem * 16 / 9);
-  padding: 1rem;
+  height: 100rem;
+  width: calc(100rem * 16 / 9);
+  padding: 8rem;
 }

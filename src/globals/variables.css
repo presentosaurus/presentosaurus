@@ -18,11 +18,11 @@ body {
 }
 
 html {
-  font-size: calc(5vw * 9 / 16);
+  font-size: calc(1vw * 9 / 16);
 }
 
 @media screen and (min-aspect-ratio: 16 / 9) {
   html {
-    font-size: 5vh;
+    font-size: 1vh;
   }
 }
