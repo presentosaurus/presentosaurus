@@ -21,7 +21,8 @@ pyro-slide.active.hydrated {
 }
 
 pyro-slide-content {
-  display: block;
+  display: flex;
+  align-items: center;
   position: relative;
   box-sizing: border-box;
   height: 100rem;
@@ -29,7 +30,7 @@ pyro-slide-content {
   padding: var(--slide-content-padding);
 }
 
-pyro-presentation[numbering] > pyro-slide > pyro-slide-content::after {
+pyro-presentation[numbering] > pyro-slide::after {
   counter-increment: slidenumber;
   content: counter(slidenumber);
   position: absolute;
@@ -37,6 +38,16 @@ pyro-presentation[numbering] > pyro-slide > pyro-slide-content::after {
   right: var(--slide-content-padding);
 }
 
-pyro-slide[no-number] > pyro-slide-content::after {
+pyro-slide[no-number]::after {
   display: none;
+}
+
+pyro-slide > .slide-title {
+  position: absolute;
+  top: var(--slide-content-padding);
+  left: var(--slide-content-padding);
+}
+
+pyro-slide > .slide-title h2 {
+  margin: 0;
 }

@@ -10,10 +10,12 @@ export class Slide {
   render() {
     return (
       <Host>
-        <pyro-slide-content>
+        <div class="slide-title">
           <slot name="slide-title">
             <h2>{this.slideTitle}</h2>
           </slot>
+        </div>
+        <pyro-slide-content>
           <slot />
         </pyro-slide-content>
       </Host>
