@@ -9,6 +9,9 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
+  interface PyroCode {
+    'language': string;
+  }
   interface PyroPresentation {
     'author': string;
     'numbering': boolean;
@@ -23,6 +26,12 @@ export namespace Components {
 declare global {
 
 
+  interface HTMLPyroCodeElement extends Components.PyroCode, HTMLStencilElement {}
+  var HTMLPyroCodeElement: {
+    prototype: HTMLPyroCodeElement;
+    new (): HTMLPyroCodeElement;
+  };
+
   interface HTMLPyroPresentationElement extends Components.PyroPresentation, HTMLStencilElement {}
   var HTMLPyroPresentationElement: {
     prototype: HTMLPyroPresentationElement;
@@ -35,12 +44,16 @@ declare global {
     new (): HTMLPyroSlideElement;
   };
   interface HTMLElementTagNameMap {
+    'pyro-code': HTMLPyroCodeElement;
     'pyro-presentation': HTMLPyroPresentationElement;
     'pyro-slide': HTMLPyroSlideElement;
   }
 }
 
 declare namespace LocalJSX {
+  interface PyroCode extends JSXBase.HTMLAttributes<HTMLPyroCodeElement> {
+    'language'?: string;
+  }
   interface PyroPresentation extends JSXBase.HTMLAttributes<HTMLPyroPresentationElement> {
     'author'?: string;
     'numbering'?: boolean;
@@ -52,6 +65,7 @@ declare namespace LocalJSX {
   }
 
   interface IntrinsicElements {
+    'pyro-code': PyroCode;
     'pyro-presentation': PyroPresentation;
     'pyro-slide': PyroSlide;
   }
