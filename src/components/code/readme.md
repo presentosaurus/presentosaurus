@@ -10,6 +10,7 @@
 | Property   | Attribute  | Description | Type     | Default     |
 | ---------- | ---------- | ----------- | -------- | ----------- |
 | `language` | `language` |             | `string` | `undefined` |
+| `src`      | `src`      |             | `string` | `undefined` |
 
 
 ----------------------------------------------

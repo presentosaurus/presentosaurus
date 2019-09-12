@@ -19,30 +19,23 @@
       numbering
     >
       <pyro-slide slide-title="Title of the first slide"></pyro-slide>
-      <pyro-slide slide-title="CSS">
-        <pyro-code language="css"
-          >p { color: red }
-
-body { 
-  width: 100%; 
-  height: 100%; 
+      <pyro-slide slide-title="Syntax highlighting">
+        <pyro-code src="/build/pyro.esm.js"/>
+      </pyro-slide>
+      <pyro-slide slide-title="FizzBuzz">
+        <pyro-code language="js"
+          >for (var i=1; i <= 100; i++) {
+  if (i % 15 == 0)
+      console.log("FizzBuzz");
+  else if (i % 3 == 0)
+      console.log("Fizz");
+  else if (i % 5 == 0)
+      console.log("Buzz");
+  else
+      console.log(i);
 }
         </pyro-code>
       </pyro-slide>
-      <pyro-slide slide-title="FizzBuzz">
-          <pyro-code language="js"
-            >for (var i=1; i <= 100; i++) {
-    if (i % 15 == 0)
-        console.log("FizzBuzz");
-    else if (i % 3 == 0)
-        console.log("Fizz");
-    else if (i % 5 == 0)
-        console.log("Buzz");
-    else
-        console.log(i);
-}
-          </pyro-code>
-        </pyro-slide>
       <pyro-slide slide-title="Title of the third slide">
         <ul>
           <li>Wuff</li>

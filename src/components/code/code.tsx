@@ -7,15 +7,18 @@ import Prism from "prismjs";
 })
 export class Code {
   @Prop() language: string;
+  @Prop() src: string;
 
   componentDidLoad() {
+    Prism.fileHighlight();
     Prism.highlightAll();
   }
   render() {
+    const languageClass = this.language && `language-${this.language}`;
     return (
       <Host>
-        <pre>
-          <code class={`language-${this.language}`}>
+        <pre data-src={this.src} class={languageClass}>
+          <code>
             <slot />
           </code>
         </pre>
