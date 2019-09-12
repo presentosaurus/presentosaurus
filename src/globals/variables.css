@@ -16,6 +16,14 @@ body {
   --color-text-secondary: #ffffff99;
   --color-text-tertiary: #ffffff61;
   --color-background: #121212;
+  --color-code-text: #abb2bf;
+  --color-code-comment: #5c6370;
+  --color-code-property: #d19a66;
+  --color-code-string: #98c379;
+  --color-code-function: #61afef;
+  --color-code-keyword: #c678dd;
+  --color-code-operator: #56b6c2;
+  --color-code-tag: #e06c75;
 }
 
 html {
