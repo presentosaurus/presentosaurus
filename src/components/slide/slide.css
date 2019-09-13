@@ -10,6 +10,9 @@ pyro-slide {
   justify-content: center;
   color: var(--color-text-primary);
   background-color: var(--color-background);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   font-size: 4rem;
 }
 

@@ -6,10 +6,17 @@ import { Component, h, Host, Prop } from "@stencil/core";
 })
 export class Slide {
   @Prop() slideTitle: string;
+  @Prop() backgroundColor: string;
+  @Prop() backgroundImage: string;
 
   render() {
+    const imageUrl = `url("${this.backgroundImage}")`;
+    const style = {
+      backgroundColor: this.backgroundColor,
+      backgroundImage: this.backgroundImage && imageUrl
+    };
     return (
-      <Host>
+      <Host style={style}>
         <div class="slide-title">
           <slot name="slide-title">
             <h2>{this.slideTitle}</h2>

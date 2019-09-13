@@ -7,9 +7,11 @@
 
 ## Properties
 
-| Property     | Attribute     | Description | Type     | Default     |
-| ------------ | ------------- | ----------- | -------- | ----------- |
-| `slideTitle` | `slide-title` |             | `string` | `undefined` |
+| Property          | Attribute          | Description | Type     | Default     |
+| ----------------- | ------------------ | ----------- | -------- | ----------- |
+| `backgroundColor` | `background-color` |             | `string` | `undefined` |
+| `backgroundImage` | `background-image` |             | `string` | `undefined` |
+| `slideTitle`      | `slide-title`      |             | `string` | `undefined` |
 
 
 ## Dependencies
