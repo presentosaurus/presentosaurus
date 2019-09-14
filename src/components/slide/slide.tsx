@@ -8,6 +8,7 @@ export class Slide {
   @Prop() slideTitle: string;
   @Prop() backgroundColor: string;
   @Prop() backgroundImage: string;
+  @Prop() backgroundIframe: string;
 
   render() {
     const imageUrl = `url("${this.backgroundImage}")`;
@@ -25,6 +26,7 @@ export class Slide {
         <pyro-slide-content>
           <slot />
         </pyro-slide-content>
+        {this.backgroundIframe && <iframe src={this.backgroundIframe} />}
       </Host>
     );
   }

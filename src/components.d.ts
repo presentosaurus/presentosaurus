@@ -23,6 +23,7 @@ export namespace Components {
   }
   interface PyroSlide {
     'backgroundColor': string;
+    'backgroundIframe': string;
     'backgroundImage': string;
     'slideTitle': string;
   }
@@ -70,6 +71,7 @@ declare namespace LocalJSX {
   }
   interface PyroSlide extends JSXBase.HTMLAttributes<HTMLPyroSlideElement> {
     'backgroundColor'?: string;
+    'backgroundIframe'?: string;
     'backgroundImage'?: string;
     'slideTitle'?: string;
   }
