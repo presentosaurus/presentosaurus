@@ -7,10 +7,12 @@
 
 ## Properties
 
-| Property   | Attribute  | Description | Type     | Default     |
-| ---------- | ---------- | ----------- | -------- | ----------- |
-| `language` | `language` |             | `string` | `undefined` |
-| `src`      | `src`      |             | `string` | `undefined` |
+| Property         | Attribute         | Description | Type      | Default     |
+| ---------------- | ----------------- | ----------- | --------- | ----------- |
+| `highlightLines` | `highlight-lines` |             | `string`  | `undefined` |
+| `language`       | `language`        |             | `string`  | `undefined` |
+| `lineNumbers`    | `line-numbers`    |             | `boolean` | `undefined` |
+| `src`            | `src`             |             | `string`  | `undefined` |
 
 
 ----------------------------------------------

@@ -1,5 +1,7 @@
 import { Component, h, Host, Prop } from "@stencil/core";
 import Prism from "prismjs";
+import "prismjs/plugins/line-numbers/prism-line-numbers.min";
+import "prismjs/plugins/line-highlight/prism-line-highlight.min";
 
 @Component({
   tag: "pyro-code",
@@ -8,16 +10,26 @@ import Prism from "prismjs";
 export class Code {
   @Prop() language: string;
   @Prop() src: string;
+  @Prop() lineNumbers: boolean;
+  @Prop() highlightLines: string;
 
   componentDidLoad() {
     Prism.fileHighlight();
     Prism.highlightAll();
   }
+
   render() {
-    const languageClass = this.language && `language-${this.language}`;
+    const classNames = [];
+    if (this.language) classNames.push(`language-${this.language}`);
+    if (this.lineNumbers) classNames.push("line-numbers");
+
     return (
       <Host>
-        <pre data-src={this.src} class={languageClass}>
+        <pre
+          data-src={this.src}
+          class={classNames.join(" ")}
+          data-line={this.highlightLines}
+        >
           <code>
             <slot />
           </code>

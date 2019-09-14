@@ -10,7 +10,9 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 export namespace Components {
   interface PyroCode {
+    'highlightLines': string;
     'language': string;
+    'lineNumbers': boolean;
     'src': string;
   }
   interface PyroPresentation {
@@ -55,7 +57,9 @@ declare global {
 
 declare namespace LocalJSX {
   interface PyroCode extends JSXBase.HTMLAttributes<HTMLPyroCodeElement> {
+    'highlightLines'?: string;
     'language'?: string;
+    'lineNumbers'?: boolean;
     'src'?: string;
   }
   interface PyroPresentation extends JSXBase.HTMLAttributes<HTMLPyroPresentationElement> {
