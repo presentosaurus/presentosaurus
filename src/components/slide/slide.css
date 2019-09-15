@@ -65,3 +65,15 @@ pyro-slide > iframe {
   border: 0;
   z-index: 2;
 }
+
+pyro-slide blockquote p::before {
+  content: "\201C";
+}
+
+pyro-slide blockquote p::after {
+  content: "\201D";
+}
+
+pyro-slide blockquote footer:before {
+  content: "—";
+}
