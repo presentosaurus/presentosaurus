@@ -1,5 +1,11 @@
 import { Component, h, Prop, State, Host, Element } from "@stencil/core";
 
+const getActiveIndex = () => Number(location.hash.slice(1));
+const setActiveIndex = (activeIndex: number) =>
+  location.replace(`#${activeIndex}`);
+const changeActiveIndex = (change: number) =>
+  setActiveIndex(getActiveIndex() + change);
+
 @Component({
   tag: "pyro-presentation",
   styleUrl: "presentation.css"
@@ -10,7 +16,7 @@ export class Presentation {
   @Prop() author: string;
   @Prop() numbering: boolean;
 
-  @State() activeIndex: number = 0;
+  @State() activeIndex: number = getActiveIndex();
 
   @Element() host: HTMLDivElement;
 
@@ -24,13 +30,13 @@ export class Presentation {
   incrementActiveIndex() {
     const maxIndex = Array.from(this.host.children).length - 1;
     if (this.activeIndex < maxIndex) {
-      this.activeIndex += 1;
+      changeActiveIndex(1);
     }
   }
 
   decrementActiveIndex() {
     if (this.activeIndex > 0) {
-      this.activeIndex -= 1;
+      changeActiveIndex(-1);
     }
   }
 
@@ -57,6 +63,9 @@ export class Presentation {
 
   componentDidLoad() {
     document.addEventListener("keydown", this.handleKeyDown);
+    window.onhashchange = () => {
+      this.activeIndex = getActiveIndex();
+    };
   }
 
   render() {
