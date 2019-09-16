@@ -15,6 +15,10 @@ export namespace Components {
     'lineNumbers': boolean;
     'src': string;
   }
+  interface PyroMath {
+    'expression': string;
+    'inline': boolean;
+  }
   interface PyroPresentation {
     'author': string;
     'numbering': boolean;
@@ -38,6 +42,12 @@ declare global {
     new (): HTMLPyroCodeElement;
   };
 
+  interface HTMLPyroMathElement extends Components.PyroMath, HTMLStencilElement {}
+  var HTMLPyroMathElement: {
+    prototype: HTMLPyroMathElement;
+    new (): HTMLPyroMathElement;
+  };
+
   interface HTMLPyroPresentationElement extends Components.PyroPresentation, HTMLStencilElement {}
   var HTMLPyroPresentationElement: {
     prototype: HTMLPyroPresentationElement;
@@ -51,6 +61,7 @@ declare global {
   };
   interface HTMLElementTagNameMap {
     'pyro-code': HTMLPyroCodeElement;
+    'pyro-math': HTMLPyroMathElement;
     'pyro-presentation': HTMLPyroPresentationElement;
     'pyro-slide': HTMLPyroSlideElement;
   }
@@ -62,6 +73,10 @@ declare namespace LocalJSX {
     'language'?: string;
     'lineNumbers'?: boolean;
     'src'?: string;
+  }
+  interface PyroMath extends JSXBase.HTMLAttributes<HTMLPyroMathElement> {
+    'expression'?: string;
+    'inline'?: boolean;
   }
   interface PyroPresentation extends JSXBase.HTMLAttributes<HTMLPyroPresentationElement> {
     'author'?: string;
@@ -78,6 +93,7 @@ declare namespace LocalJSX {
 
   interface IntrinsicElements {
     'pyro-code': PyroCode;
+    'pyro-math': PyroMath;
     'pyro-presentation': PyroPresentation;
     'pyro-slide': PyroSlide;
   }
