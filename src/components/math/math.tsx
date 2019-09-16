@@ -1,5 +1,6 @@
 import { Component, Prop, Element } from "@stencil/core";
 import katex from "katex";
+import "katex/dist/contrib/mhchem.min";
 
 @Component({
   tag: "pyro-math",
