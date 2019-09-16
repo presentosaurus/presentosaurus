@@ -14,6 +14,7 @@ export class Presentation {
   @Prop() presentationTitle: string;
   @Prop() subtitle: string;
   @Prop() author: string;
+  @Prop() url: string;
   @Prop() numbering: boolean;
 
   @State() activeIndex: number = getActiveIndex();
@@ -72,6 +73,7 @@ export class Presentation {
     return (
       <Host>
         <pyro-slide no-number>
+          <pyro-qrcode content={this.url}></pyro-qrcode>
           <div>
             <slot name="presentation-title">
               <h1>{this.presentationTitle}</h1>

@@ -24,6 +24,10 @@ export namespace Components {
     'numbering': boolean;
     'presentationTitle': string;
     'subtitle': string;
+    'url': string;
+  }
+  interface PyroQrcode {
+    'content': string;
   }
   interface PyroSlide {
     'backgroundColor': string;
@@ -54,6 +58,12 @@ declare global {
     new (): HTMLPyroPresentationElement;
   };
 
+  interface HTMLPyroQrcodeElement extends Components.PyroQrcode, HTMLStencilElement {}
+  var HTMLPyroQrcodeElement: {
+    prototype: HTMLPyroQrcodeElement;
+    new (): HTMLPyroQrcodeElement;
+  };
+
   interface HTMLPyroSlideElement extends Components.PyroSlide, HTMLStencilElement {}
   var HTMLPyroSlideElement: {
     prototype: HTMLPyroSlideElement;
@@ -63,6 +73,7 @@ declare global {
     'pyro-code': HTMLPyroCodeElement;
     'pyro-math': HTMLPyroMathElement;
     'pyro-presentation': HTMLPyroPresentationElement;
+    'pyro-qrcode': HTMLPyroQrcodeElement;
     'pyro-slide': HTMLPyroSlideElement;
   }
 }
@@ -83,6 +94,10 @@ declare namespace LocalJSX {
     'numbering'?: boolean;
     'presentationTitle'?: string;
     'subtitle'?: string;
+    'url'?: string;
+  }
+  interface PyroQrcode extends JSXBase.HTMLAttributes<HTMLPyroQrcodeElement> {
+    'content'?: string;
   }
   interface PyroSlide extends JSXBase.HTMLAttributes<HTMLPyroSlideElement> {
     'backgroundColor'?: string;
@@ -95,6 +110,7 @@ declare namespace LocalJSX {
     'pyro-code': PyroCode;
     'pyro-math': PyroMath;
     'pyro-presentation': PyroPresentation;
+    'pyro-qrcode': PyroQrcode;
     'pyro-slide': PyroSlide;
   }
 }
