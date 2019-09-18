@@ -2,10 +2,16 @@
 
 - first item
 - second item
+  - quack
+  - meow
 - third item
 
 ---
 
 ## Second header
 
-hello
+hello $ a + b = c $
+
+```js
+const add = (a,b) => (a+b)
+```
