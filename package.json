@@ -10,5 +10,11 @@
   },
   "devDependencies": {
     "lerna": "3.16.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miguel-sc/pyro.git"
+  },
+  "author": "Miguel Santos Correa <mail@miguelsantoscorrea.com>",
+  "homepage": "https://github.com/miguel-sc/pyro#readme"
 }
