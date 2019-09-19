@@ -1,0 +1,10 @@
+{
+  "name": "@pyroslides/cli",
+  "version": "0.0.0",
+  "description": "Pyroslides CLI",
+  "main": "index.ts",
+  "scripts": {},
+  "dependencies": {
+    "@pyroslides/markdown": "0.0.0"
+  }
+}
