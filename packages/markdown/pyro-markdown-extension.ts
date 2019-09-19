@@ -2,7 +2,7 @@ module.exports = (): showdown.ShowdownExtension[] => {
   return [
     {
       type: "lang",
-      filter: function(text, converter) {
+      filter: (text, converter) => {
         const mdslides = text.split("\n\n---\n\n");
         if (mdslides.length <= 1) return text;
 
