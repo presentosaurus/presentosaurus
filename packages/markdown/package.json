@@ -2,12 +2,15 @@
   "name": "@pyroslides/markdown",
   "version": "0.0.0",
   "description": "Pyroslides markdown",
-  "main": "index.ts",
-  "scripts": {},
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
   "dependencies": {
     "showdown": "1.9.0"
   },
   "devDependencies": {
-    "@types/showdown": "1.9.3"
+    "@types/showdown": "1.9.3",
+    "typescript": "3.6.3"
   }
 }

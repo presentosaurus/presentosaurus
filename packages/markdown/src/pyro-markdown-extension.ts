@@ -1,4 +1,6 @@
-module.exports = (): showdown.ShowdownExtension[] => {
+import { ShowdownExtension } from "showdown";
+
+export const pyroExtension = (): ShowdownExtension[] => {
   return [
     {
       type: "lang",
