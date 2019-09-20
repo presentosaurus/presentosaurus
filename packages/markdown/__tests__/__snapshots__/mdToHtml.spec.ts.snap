@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render sample slides 1`] = `
+"<div>
+<pyro-presentation>
+<pyro-slide>
+<h1 id=\\"sample-presentation\\">Sample Presentation</h1>
+</pyro-slide>
+<pyro-slide>
+<h2 id=\\"title\\">Title</h2>
+<ul>
+<li>meow</li>
+<li>moo</li>
+</ul>
+</pyro-slide>
+<pyro-slide>
+<p>quack
+lol</p>
+</pyro-slide>
+</pyro-presentation>
+</div>"
+`;
