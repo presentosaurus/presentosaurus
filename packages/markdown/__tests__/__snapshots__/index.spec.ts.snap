@@ -1,10 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render snapshot of empty.md 1`] = `""`;
+exports[`should render snapshot of empty.md 1`] = `
+"<pyro-presentation>
+<pyro-slide>
+
+</pyro-slide>
+</pyro-presentation>"
+`;
 
 exports[`should render snapshot of sample.md 1`] = `
-"<div>
-<pyro-presentation>
+"<pyro-presentation>
 <pyro-slide>
 <h1 id=\\"sample-presentation\\">Sample Presentation</h1>
 </pyro-slide>
@@ -19,6 +24,5 @@ exports[`should render snapshot of sample.md 1`] = `
 <p>quack
 lol</p>
 </pyro-slide>
-</pyro-presentation>
-</div>"
+</pyro-presentation>"
 `;
