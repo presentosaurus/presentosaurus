@@ -1,6 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render sample slides 1`] = `
+exports[`should render snapshot of empty.md 1`] = `""`;
+
+exports[`should render snapshot of sample.md 1`] = `
 "<div>
 <pyro-presentation>
 <pyro-slide>
