@@ -1,9 +1,8 @@
 {
-  "name": "website",
+  "name": "@pyroslides/website",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
