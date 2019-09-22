@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@pyroslides/markdown": "0.0.0",
-    "chalk": "2.4.2"
+    "chalk": "2.4.2",
+    "yargs": "14.0.0"
   }
 }

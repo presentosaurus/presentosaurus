@@ -1,10 +1,20 @@
 #!/usr/bin/env node
 
-//import { mdToHtml } from "@pyroslides/markdown";
-import chalk from "chalk";
+import yargs from "yargs";
 
-const args = process.argv.slice(2);
-
-if (args.length === 0) {
-  console.log(chalk.red("🔥 Pyro"));
-}
+yargs
+  .scriptName("pyro")
+  .command({
+    command: "build <slides>",
+    describe: "Build HTML from markdown",
+    builder: yargs =>
+      yargs.positional("slides", {
+        type: "string",
+        default: "index.md",
+        describe: "path to markdown file"
+      }),
+    handler: argv => {
+      console.log(`building ${argv.slides}`);
+    }
+  })
+  .help().argv;
