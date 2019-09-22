@@ -1,6 +1,7 @@
 import { CommandModule } from "yargs";
 import { readFileSync, writeFileSync } from "fs";
 import { join, dirname, basename, extname } from "path";
+import chalk from "chalk";
 import { mdToHtml } from "@pyroslides/markdown";
 
 const replaceExt = (path: string, ext: string) => {
@@ -21,6 +22,7 @@ const command: CommandModule<{}, { slides: string }> = {
     const html = mdToHtml(md);
     const htmlPath = replaceExt(argv.slides, ".html");
     writeFileSync(htmlPath, html);
+    console.log(chalk.green("Build successful."));
   }
 };
 
