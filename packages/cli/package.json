@@ -2,12 +2,12 @@
   "name": "@pyroslides/cli",
   "version": "0.0.0",
   "description": "Pyroslides CLI",
-  "main": "bin/cli.js",
+  "main": "lib/cli.js",
   "bin": {
-    "pyro": "bin/cli.js"
+    "pyro": "lib/cli.js"
   },
   "files": [
-    "bin"
+    "lib"
   ],
   "scripts": {
     "build": "tsc"
