@@ -2,9 +2,9 @@
   "name": "@pyroslides/cli",
   "version": "0.0.0",
   "description": "Pyroslides CLI",
-  "main": "./lib/index.js",
+  "main": "bin/cli.js",
   "bin": {
-    "pyro": "./lib/index.js"
+    "pyro": "bin/cli.js"
   },
   "scripts": {
     "build": "tsc"
@@ -13,6 +13,7 @@
     "typescript": "3.6.3"
   },
   "dependencies": {
-    "@pyroslides/markdown": "0.0.0"
+    "@pyroslides/markdown": "0.0.0",
+    "chalk": "2.4.2"
   }
 }
