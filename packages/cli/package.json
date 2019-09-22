@@ -6,6 +6,9 @@
   "bin": {
     "pyro": "bin/cli.js"
   },
+  "files": [
+    "bin"
+  ],
   "scripts": {
     "build": "tsc"
   },
