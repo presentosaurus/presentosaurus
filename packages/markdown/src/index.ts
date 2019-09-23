@@ -6,7 +6,7 @@ converter.setFlavor("github");
 converter.setOption("simpleLineBreaks", false);
 
 export const mdToHtml = (md: string) => {
-  const mdslides = md.split("\n\n---\n\n");
+  const mdslides = md.split("\n---\n");
 
   const slides = mdslides
     .map(s => converter.makeHtml(s))
