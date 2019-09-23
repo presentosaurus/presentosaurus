@@ -1,9 +1,6 @@
 # pyro-code
 
-
-
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -14,7 +11,6 @@
 | `lineNumbers`    | `line-numbers`    |             | `boolean` | `undefined` |
 | `src`            | `src`             |             | `string`  | `undefined` |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

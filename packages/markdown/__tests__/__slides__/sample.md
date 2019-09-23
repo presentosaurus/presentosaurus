@@ -9,5 +9,4 @@
 
 ---
 
-quack
-lol
+quack lol

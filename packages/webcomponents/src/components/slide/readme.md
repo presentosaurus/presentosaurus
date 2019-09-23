@@ -1,9 +1,6 @@
 # pyro-slide
 
-
-
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -14,20 +11,20 @@
 | `backgroundImage`  | `background-image`  |             | `string` | `undefined` |
 | `slideTitle`       | `slide-title`       |             | `string` | `undefined` |
 
-
 ## Dependencies
 
 ### Used by
 
- - [pyro-presentation](../presentation)
+- [pyro-presentation](../presentation)
 
 ### Graph
+
 ```mermaid
 graph TD;
   pyro-presentation --> pyro-slide
   style pyro-slide fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
-----------------------------------------------
+---
 
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

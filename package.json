@@ -32,5 +32,8 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "prettier": {
+    "proseWrap": "always"
   }
 }

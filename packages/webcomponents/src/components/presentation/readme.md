@@ -1,9 +1,6 @@
 # pyro-presentation
 
-
-
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -15,7 +12,6 @@
 | `subtitle`          | `subtitle`           |             | `string`  | `undefined` |
 | `url`               | `url`                |             | `string`  | `undefined` |
 
-
 ## Dependencies
 
 ### Depends on
@@ -24,6 +20,7 @@
 - [pyro-qrcode](../qrcode)
 
 ### Graph
+
 ```mermaid
 graph TD;
   pyro-presentation --> pyro-slide
@@ -31,6 +28,6 @@ graph TD;
   style pyro-presentation fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
-----------------------------------------------
+---
 
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

@@ -1,9 +1,6 @@
 # pyro-math
 
-
-
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -12,7 +9,6 @@
 | `expression` | `expression` |             | `string`  | `""`    |
 | `inline`     | `inline`     |             | `boolean` | `false` |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_
