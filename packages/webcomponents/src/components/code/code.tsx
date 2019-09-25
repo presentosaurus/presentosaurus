@@ -2,6 +2,9 @@ import { Component, h, Host, Prop } from "@stencil/core";
 import Prism from "prismjs";
 import "prismjs/plugins/line-numbers/prism-line-numbers.min";
 import "prismjs/plugins/line-highlight/prism-line-highlight.min";
+import "prismjs/plugins/autoloader/prism-autoloader.min";
+
+Prism.plugins.autoloader.languages_path = "prismjs/components/";
 
 @Component({
   tag: "pyro-code",
