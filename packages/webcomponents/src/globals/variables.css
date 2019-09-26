@@ -18,6 +18,16 @@ h6 {
   --color-text-secondary: #00000099;
   --color-text-tertiary: #00000061;
   --color-background: #ffffff;
+  --color-code-text: hsl(230, 8%, 24%);
+  --color-code-comment: hsl(230, 4%, 64%);
+  --color-code-property: hsl(41, 99%, 30%);
+  --color-code-string: hsl(119, 34%, 47%);
+  --color-code-builtin: hsl(41, 99%, 38%);
+  --color-code-function: hsl(221, 87%, 60%);
+  --color-code-keyword: hsl(301, 63%, 40%);
+  --color-code-operator: hsl(198, 99%, 37%);
+  --color-code-tag: hsl(5, 74%, 59%);
+  --opacity-code-line-highlight: 0.7;
 }
 
 [data-theme="dark"] {
@@ -29,10 +39,12 @@ h6 {
   --color-code-comment: #5c6370;
   --color-code-property: #d19a66;
   --color-code-string: #98c379;
+  --color-code-builtin: #e5c07b;
   --color-code-function: #61afef;
   --color-code-keyword: #c678dd;
   --color-code-operator: #56b6c2;
   --color-code-tag: #e06c75;
+  --opacity-code-line-highlight: 0.5;
 }
 
 html {
