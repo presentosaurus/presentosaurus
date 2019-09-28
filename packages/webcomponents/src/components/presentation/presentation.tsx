@@ -1,4 +1,12 @@
-import { Component, h, Prop, State, Host, Element } from "@stencil/core";
+import {
+  Component,
+  h,
+  Prop,
+  State,
+  Host,
+  Element,
+  Listen
+} from "@stencil/core";
 
 const getActiveIndex = () => Number(location.hash.slice(1));
 const setActiveIndex = (activeIndex: number) =>
@@ -21,6 +29,28 @@ export class Presentation {
 
   @Element() host: HTMLElement;
 
+  @Listen("keydown")
+  handleKeyDown(event: KeyboardEvent) {
+    if (event.defaultPrevented) {
+      return;
+    }
+
+    switch (event.key) {
+      case "Left":
+      case "ArrowLeft":
+        this.decrementActiveIndex();
+        break;
+      case "Right":
+      case "ArrowRight":
+        this.incrementActiveIndex();
+        break;
+      default:
+        return;
+    }
+
+    event.preventDefault();
+  }
+
   componentDidRender() {
     Array.from(this.host.children).forEach(child =>
       child.classList.remove("active")
@@ -41,29 +71,7 @@ export class Presentation {
     }
   }
 
-  handleKeyDown = (event: KeyboardEvent) => {
-    if (event.defaultPrevented) {
-      return;
-    }
-
-    switch (event.key) {
-      case "Left":
-      case "ArrowLeft":
-        this.decrementActiveIndex();
-        break;
-      case "Right":
-      case "ArrowRight":
-        this.incrementActiveIndex();
-        break;
-      default:
-        return;
-    }
-
-    event.preventDefault();
-  };
-
   componentDidLoad() {
-    document.addEventListener("keydown", this.handleKeyDown);
     window.onhashchange = () => {
       this.activeIndex = getActiveIndex();
     };
@@ -71,7 +79,7 @@ export class Presentation {
 
   render() {
     return (
-      <Host>
+      <Host tabindex="0">
         <pyro-slide no-number>
           <pyro-qrcode content={this.url}></pyro-qrcode>
           <div>
