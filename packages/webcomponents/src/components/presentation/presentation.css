@@ -1,4 +1,6 @@
 pyro-presentation {
+  width: 100vw;
+  height: 100vh;
   display: block;
   counter-reset: slidenumber;
 }

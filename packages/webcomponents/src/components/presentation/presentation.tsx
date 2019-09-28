@@ -19,7 +19,7 @@ export class Presentation {
 
   @State() activeIndex: number = getActiveIndex();
 
-  @Element() host: HTMLDivElement;
+  @Element() host: HTMLElement;
 
   componentDidRender() {
     Array.from(this.host.children).forEach(child =>
@@ -87,6 +87,7 @@ export class Presentation {
           </div>
         </pyro-slide>
         <slot />
+        <pyro-controls presentationElement={this.host}></pyro-controls>
       </Host>
     );
   }

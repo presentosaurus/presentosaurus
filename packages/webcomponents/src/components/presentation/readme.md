@@ -18,6 +18,7 @@
 
 - [pyro-slide](../slide)
 - [pyro-qrcode](../qrcode)
+- [pyro-controls](../controls)
 
 ### Graph
 
@@ -25,6 +26,7 @@
 graph TD;
   pyro-presentation --> pyro-slide
   pyro-presentation --> pyro-qrcode
+  pyro-presentation --> pyro-controls
   style pyro-presentation fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

@@ -4,124 +4,145 @@
  * It contains typing information for all components that exist in this project.
  */
 
-
-import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
-
+import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 
 export namespace Components {
   interface PyroCode {
-    'highlightLines': string;
-    'language': string;
-    'lineNumbers': boolean;
-    'src': string;
+    highlightLines: string;
+    language: string;
+    lineNumbers: boolean;
+    src: string;
+  }
+  interface PyroControls {
+    presentationElement: HTMLElement;
   }
   interface PyroMath {
-    'expression': string;
-    'inline': boolean;
+    expression: string;
+    inline: boolean;
   }
   interface PyroPresentation {
-    'author': string;
-    'numbering': boolean;
-    'presentationTitle': string;
-    'subtitle': string;
-    'url': string;
+    author: string;
+    numbering: boolean;
+    presentationTitle: string;
+    subtitle: string;
+    url: string;
   }
   interface PyroQrcode {
-    'content': string;
+    content: string;
   }
   interface PyroSlide {
-    'backgroundColor': string;
-    'backgroundIframe': string;
-    'backgroundImage': string;
-    'slideTitle': string;
+    backgroundColor: string;
+    backgroundIframe: string;
+    backgroundImage: string;
+    slideTitle: string;
   }
 }
 
 declare global {
-
-
-  interface HTMLPyroCodeElement extends Components.PyroCode, HTMLStencilElement {}
+  interface HTMLPyroCodeElement
+    extends Components.PyroCode,
+      HTMLStencilElement {}
   var HTMLPyroCodeElement: {
     prototype: HTMLPyroCodeElement;
     new (): HTMLPyroCodeElement;
   };
 
-  interface HTMLPyroMathElement extends Components.PyroMath, HTMLStencilElement {}
+  interface HTMLPyroControlsElement
+    extends Components.PyroControls,
+      HTMLStencilElement {}
+  var HTMLPyroControlsElement: {
+    prototype: HTMLPyroControlsElement;
+    new (): HTMLPyroControlsElement;
+  };
+
+  interface HTMLPyroMathElement
+    extends Components.PyroMath,
+      HTMLStencilElement {}
   var HTMLPyroMathElement: {
     prototype: HTMLPyroMathElement;
     new (): HTMLPyroMathElement;
   };
 
-  interface HTMLPyroPresentationElement extends Components.PyroPresentation, HTMLStencilElement {}
+  interface HTMLPyroPresentationElement
+    extends Components.PyroPresentation,
+      HTMLStencilElement {}
   var HTMLPyroPresentationElement: {
     prototype: HTMLPyroPresentationElement;
     new (): HTMLPyroPresentationElement;
   };
 
-  interface HTMLPyroQrcodeElement extends Components.PyroQrcode, HTMLStencilElement {}
+  interface HTMLPyroQrcodeElement
+    extends Components.PyroQrcode,
+      HTMLStencilElement {}
   var HTMLPyroQrcodeElement: {
     prototype: HTMLPyroQrcodeElement;
     new (): HTMLPyroQrcodeElement;
   };
 
-  interface HTMLPyroSlideElement extends Components.PyroSlide, HTMLStencilElement {}
+  interface HTMLPyroSlideElement
+    extends Components.PyroSlide,
+      HTMLStencilElement {}
   var HTMLPyroSlideElement: {
     prototype: HTMLPyroSlideElement;
     new (): HTMLPyroSlideElement;
   };
   interface HTMLElementTagNameMap {
-    'pyro-code': HTMLPyroCodeElement;
-    'pyro-math': HTMLPyroMathElement;
-    'pyro-presentation': HTMLPyroPresentationElement;
-    'pyro-qrcode': HTMLPyroQrcodeElement;
-    'pyro-slide': HTMLPyroSlideElement;
+    "pyro-code": HTMLPyroCodeElement;
+    "pyro-controls": HTMLPyroControlsElement;
+    "pyro-math": HTMLPyroMathElement;
+    "pyro-presentation": HTMLPyroPresentationElement;
+    "pyro-qrcode": HTMLPyroQrcodeElement;
+    "pyro-slide": HTMLPyroSlideElement;
   }
 }
 
 declare namespace LocalJSX {
   interface PyroCode extends JSXBase.HTMLAttributes<HTMLPyroCodeElement> {
-    'highlightLines'?: string;
-    'language'?: string;
-    'lineNumbers'?: boolean;
-    'src'?: string;
+    highlightLines?: string;
+    language?: string;
+    lineNumbers?: boolean;
+    src?: string;
+  }
+  interface PyroControls
+    extends JSXBase.HTMLAttributes<HTMLPyroControlsElement> {
+    presentationElement?: HTMLElement;
   }
   interface PyroMath extends JSXBase.HTMLAttributes<HTMLPyroMathElement> {
-    'expression'?: string;
-    'inline'?: boolean;
+    expression?: string;
+    inline?: boolean;
   }
-  interface PyroPresentation extends JSXBase.HTMLAttributes<HTMLPyroPresentationElement> {
-    'author'?: string;
-    'numbering'?: boolean;
-    'presentationTitle'?: string;
-    'subtitle'?: string;
-    'url'?: string;
+  interface PyroPresentation
+    extends JSXBase.HTMLAttributes<HTMLPyroPresentationElement> {
+    author?: string;
+    numbering?: boolean;
+    presentationTitle?: string;
+    subtitle?: string;
+    url?: string;
   }
   interface PyroQrcode extends JSXBase.HTMLAttributes<HTMLPyroQrcodeElement> {
-    'content'?: string;
+    content?: string;
   }
   interface PyroSlide extends JSXBase.HTMLAttributes<HTMLPyroSlideElement> {
-    'backgroundColor'?: string;
-    'backgroundIframe'?: string;
-    'backgroundImage'?: string;
-    'slideTitle'?: string;
+    backgroundColor?: string;
+    backgroundIframe?: string;
+    backgroundImage?: string;
+    slideTitle?: string;
   }
 
   interface IntrinsicElements {
-    'pyro-code': PyroCode;
-    'pyro-math': PyroMath;
-    'pyro-presentation': PyroPresentation;
-    'pyro-qrcode': PyroQrcode;
-    'pyro-slide': PyroSlide;
+    "pyro-code": PyroCode;
+    "pyro-controls": PyroControls;
+    "pyro-math": PyroMath;
+    "pyro-presentation": PyroPresentation;
+    "pyro-qrcode": PyroQrcode;
+    "pyro-slide": PyroSlide;
   }
 }
 
 export { LocalJSX as JSX };
-
 
 declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements extends LocalJSX.IntrinsicElements {}
   }
 }
-
-

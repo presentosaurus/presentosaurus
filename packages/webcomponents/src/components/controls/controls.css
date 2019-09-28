@@ -1,0 +1,44 @@
+pyro-controls {
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  right: 0;
+}
+
+pyro-controls .fullscreen-button {
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+pyro-controls .fullscreen-button img {
+  width: 100%;
+  height: 100%;
+}
+
+pyro-controls .fullscreen-button div {
+  width: 72px;
+  height: 72px;
+  transition: width 0.3s, height 0.3s;
+}
+
+pyro-controls .fullscreen-button,
+pyro-controls .fullscreen-button:hover div,
+pyro-controls .fullscreen-button:focus div {
+  width: 96px;
+  height: 96px;
+}
+
+pyro-presentation:not(:fullscreen) .fullscreen-icon,
+pyro-presentation:fullscreen .fullscreen-exit-icon {
+  display: inline;
+}
+
+pyro-presentation:fullscreen .fullscreen-icon,
+pyro-presentation:not(:fullscreen) .fullscreen-exit-icon {
+  display: none;
+}
