@@ -13,9 +13,7 @@ export namespace Components {
     lineNumbers: boolean;
     src: string;
   }
-  interface PyroControls {
-    presentationElement: HTMLElement;
-  }
+  interface PyroControls {}
   interface PyroMath {
     expression: string;
     inline: boolean;
@@ -105,7 +103,7 @@ declare namespace LocalJSX {
   }
   interface PyroControls
     extends JSXBase.HTMLAttributes<HTMLPyroControlsElement> {
-    presentationElement?: HTMLElement;
+    onToggleFullscreen?: (event: CustomEvent<any>) => void;
   }
   interface PyroMath extends JSXBase.HTMLAttributes<HTMLPyroMathElement> {
     expression?: string;

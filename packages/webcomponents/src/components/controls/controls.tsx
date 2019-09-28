@@ -1,5 +1,4 @@
-import { Component, h, Host, Prop } from "@stencil/core";
-import { toggleFullscreen } from "../../utils/fullscreen";
+import { Component, h, Host, Event, EventEmitter } from "@stencil/core";
 import fullscreen from "material-design-icons/navigation/svg/production/ic_fullscreen_24px.svg";
 import fullscreenExit from "material-design-icons/navigation/svg/production/ic_fullscreen_exit_24px.svg";
 
@@ -8,9 +7,7 @@ import fullscreenExit from "material-design-icons/navigation/svg/production/ic_f
   styleUrl: "controls.css"
 })
 export class Controls {
-  @Prop() presentationElement: HTMLElement;
-
-  clickHandler = () => toggleFullscreen(this.presentationElement);
+  @Event() toggleFullscreen: EventEmitter;
 
   render() {
     return (
@@ -18,7 +15,7 @@ export class Controls {
         <button
           class="fullscreen-button"
           type="button"
-          onClick={this.clickHandler}
+          onClick={this.toggleFullscreen.emit}
         >
           <div>
             <img

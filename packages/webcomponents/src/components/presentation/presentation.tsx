@@ -7,6 +7,7 @@ import {
   Element,
   Listen
 } from "@stencil/core";
+import { toggleFullscreen } from "../../utils/fullscreen";
 
 const getActiveIndex = () => Number(location.hash.slice(1));
 const setActiveIndex = (activeIndex: number) =>
@@ -44,11 +45,19 @@ export class Presentation {
       case "ArrowRight":
         this.incrementActiveIndex();
         break;
+      case "f":
+      case "F":
+        this.handleToggleFullscreen();
       default:
         return;
     }
 
     event.preventDefault();
+  }
+
+  @Listen("toggleFullscreen")
+  handleToggleFullscreen() {
+    toggleFullscreen(this.host);
   }
 
   componentDidRender() {
@@ -95,7 +104,7 @@ export class Presentation {
           </div>
         </pyro-slide>
         <slot />
-        <pyro-controls presentationElement={this.host}></pyro-controls>
+        <pyro-controls></pyro-controls>
       </Host>
     );
   }
