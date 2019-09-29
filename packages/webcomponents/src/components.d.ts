@@ -95,34 +95,32 @@ declare global {
 }
 
 declare namespace LocalJSX {
-  interface PyroCode extends JSXBase.HTMLAttributes<HTMLPyroCodeElement> {
+  interface PyroCode {
     highlightLines?: string;
     language?: string;
     lineNumbers?: boolean;
     src?: string;
   }
-  interface PyroControls
-    extends JSXBase.HTMLAttributes<HTMLPyroControlsElement> {
+  interface PyroControls {
     onNextSlide?: (event: CustomEvent<any>) => void;
     onPreviousSlide?: (event: CustomEvent<any>) => void;
     onToggleFullscreen?: (event: CustomEvent<any>) => void;
   }
-  interface PyroMath extends JSXBase.HTMLAttributes<HTMLPyroMathElement> {
+  interface PyroMath {
     expression?: string;
     inline?: boolean;
   }
-  interface PyroPresentation
-    extends JSXBase.HTMLAttributes<HTMLPyroPresentationElement> {
+  interface PyroPresentation {
     author?: string;
     numbering?: boolean;
     presentationTitle?: string;
     subtitle?: string;
     url?: string;
   }
-  interface PyroQrcode extends JSXBase.HTMLAttributes<HTMLPyroQrcodeElement> {
+  interface PyroQrcode {
     content?: string;
   }
-  interface PyroSlide extends JSXBase.HTMLAttributes<HTMLPyroSlideElement> {
+  interface PyroSlide {
     backgroundColor?: string;
     backgroundIframe?: string;
     backgroundImage?: string;
@@ -143,6 +141,19 @@ export { LocalJSX as JSX };
 
 declare module "@stencil/core" {
   export namespace JSX {
-    interface IntrinsicElements extends LocalJSX.IntrinsicElements {}
+    interface IntrinsicElements {
+      "pyro-code": LocalJSX.PyroCode &
+        JSXBase.HTMLAttributes<HTMLPyroCodeElement>;
+      "pyro-controls": LocalJSX.PyroControls &
+        JSXBase.HTMLAttributes<HTMLPyroControlsElement>;
+      "pyro-math": LocalJSX.PyroMath &
+        JSXBase.HTMLAttributes<HTMLPyroMathElement>;
+      "pyro-presentation": LocalJSX.PyroPresentation &
+        JSXBase.HTMLAttributes<HTMLPyroPresentationElement>;
+      "pyro-qrcode": LocalJSX.PyroQrcode &
+        JSXBase.HTMLAttributes<HTMLPyroQrcodeElement>;
+      "pyro-slide": LocalJSX.PyroSlide &
+        JSXBase.HTMLAttributes<HTMLPyroSlideElement>;
+    }
   }
 }
