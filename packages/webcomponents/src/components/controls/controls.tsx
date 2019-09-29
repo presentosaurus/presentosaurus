@@ -18,33 +18,15 @@ export class Controls {
   render() {
     return (
       <Host>
-        <button
-          class="fullscreen-button"
-          type="button"
-          onClick={this.previousSlide.emit}
-        >
-          <div>
-            <ChevronLeftIcon />
-          </div>
+        <button class="control-button" onClick={this.previousSlide.emit}>
+          <ChevronLeftIcon />
         </button>
-        <button
-          class="fullscreen-button"
-          type="button"
-          onClick={this.nextSlide.emit}
-        >
-          <div>
-            <ChevronRightIcon />
-          </div>
+        <button class="control-button" onClick={this.nextSlide.emit}>
+          <ChevronRightIcon />
         </button>
-        <button
-          class="fullscreen-button"
-          type="button"
-          onClick={this.toggleFullscreen.emit}
-        >
-          <div>
-            <FullscreenIcon />
-            <FullscreenExitIcon />
-          </div>
+        <button class="control-button" onClick={this.toggleFullscreen.emit}>
+          <FullscreenIcon />
+          <FullscreenExitIcon />
         </button>
       </Host>
     );

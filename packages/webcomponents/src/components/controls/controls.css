@@ -6,7 +6,7 @@ pyro-controls {
   right: 0;
 }
 
-pyro-controls .fullscreen-button {
+pyro-controls .control-button {
   background: none;
   border: none;
   display: flex;
@@ -16,19 +16,16 @@ pyro-controls .fullscreen-button {
   padding: 0;
 }
 
-pyro-controls .fullscreen-button svg {
+pyro-controls .control-button svg {
   fill: var(--color-text-primary);
-}
-
-pyro-controls .fullscreen-button div {
   width: 72px;
   height: 72px;
   transition: width 0.3s, height 0.3s;
 }
 
-pyro-controls .fullscreen-button,
-pyro-controls .fullscreen-button:hover div,
-pyro-controls .fullscreen-button:focus div {
+pyro-controls .control-button,
+pyro-controls .control-button:hover svg,
+pyro-controls .control-button:focus svg {
   width: 96px;
   height: 96px;
 }
