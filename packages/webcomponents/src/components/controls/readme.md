@@ -2,11 +2,11 @@
 
 <!-- Auto Generated Below -->
 
-## Properties
+## Events
 
-| Property              | Attribute | Description | Type          | Default     |
-| --------------------- | --------- | ----------- | ------------- | ----------- |
-| `presentationElement` | --        |             | `HTMLElement` | `undefined` |
+| Event              | Description | Type               |
+| ------------------ | ----------- | ------------------ |
+| `toggleFullscreen` |             | `CustomEvent<any>` |
 
 ## Dependencies
 

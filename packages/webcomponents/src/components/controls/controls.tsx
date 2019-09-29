@@ -1,6 +1,5 @@
 import { Component, h, Host, Event, EventEmitter } from "@stencil/core";
-import fullscreen from "material-design-icons/navigation/svg/production/ic_fullscreen_24px.svg";
-import fullscreenExit from "material-design-icons/navigation/svg/production/ic_fullscreen_exit_24px.svg";
+import { FullscreenIcon, FullscreenExitIcon } from "./icons";
 
 @Component({
   tag: "pyro-controls",
@@ -18,16 +17,8 @@ export class Controls {
           onClick={this.toggleFullscreen.emit}
         >
           <div>
-            <img
-              src={fullscreen}
-              alt="fullscreen icon"
-              class="fullscreen-icon"
-            ></img>
-            <img
-              src={fullscreenExit}
-              alt="fullscreen exit icon"
-              class="fullscreen-exit-icon"
-            ></img>
+            <FullscreenIcon />
+            <FullscreenExitIcon />
           </div>
         </button>
       </Host>
