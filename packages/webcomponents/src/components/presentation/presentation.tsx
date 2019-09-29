@@ -67,6 +67,7 @@ export class Presentation {
     Array.from(this.host.children)[this.activeIndex].classList.add("active");
   }
 
+  @Listen("nextSlide")
   incrementActiveIndex() {
     const maxIndex = Array.from(this.host.children).length - 1;
     if (this.activeIndex < maxIndex) {
@@ -74,6 +75,7 @@ export class Presentation {
     }
   }
 
+  @Listen("previousSlide")
   decrementActiveIndex() {
     if (this.activeIndex > 0) {
       changeActiveIndex(-1);

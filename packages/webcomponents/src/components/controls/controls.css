@@ -1,5 +1,6 @@
 pyro-controls {
   position: absolute;
+  display: flex;
   z-index: 10;
   bottom: 0;
   right: 0;

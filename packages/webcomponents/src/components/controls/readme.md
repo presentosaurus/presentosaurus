@@ -6,6 +6,8 @@
 
 | Event              | Description | Type               |
 | ------------------ | ----------- | ------------------ |
+| `nextSlide`        |             | `CustomEvent<any>` |
+| `previousSlide`    |             | `CustomEvent<any>` |
 | `toggleFullscreen` |             | `CustomEvent<any>` |
 
 ## Dependencies

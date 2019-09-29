@@ -103,6 +103,8 @@ declare namespace LocalJSX {
   }
   interface PyroControls
     extends JSXBase.HTMLAttributes<HTMLPyroControlsElement> {
+    onNextSlide?: (event: CustomEvent<any>) => void;
+    onPreviousSlide?: (event: CustomEvent<any>) => void;
     onToggleFullscreen?: (event: CustomEvent<any>) => void;
   }
   interface PyroMath extends JSXBase.HTMLAttributes<HTMLPyroMathElement> {
