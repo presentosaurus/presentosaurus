@@ -4,6 +4,11 @@ pyro-controls {
   z-index: 10;
   bottom: 0;
   right: 0;
+  transition: opacity 0.5s;
+}
+
+pyro-presentation.inactive:fullscreen pyro-controls {
+  opacity: 0;
 }
 
 pyro-controls .control-button {

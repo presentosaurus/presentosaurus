@@ -4,3 +4,7 @@ pyro-presentation {
   display: block;
   counter-reset: slidenumber;
 }
+
+pyro-presentation.inactive:fullscreen {
+  cursor: none;
+}

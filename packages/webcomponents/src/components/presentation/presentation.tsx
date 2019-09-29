@@ -9,6 +9,8 @@ import {
 } from "@stencil/core";
 import { toggleFullscreen } from "../../utils/fullscreen";
 
+const INACTIVITY_TIMEOUT = 3000;
+
 const getActiveIndex = () => Number(location.hash.slice(1));
 const setActiveIndex = (activeIndex: number) =>
   location.replace(`#${activeIndex}`);
@@ -29,6 +31,8 @@ export class Presentation {
   @State() activeIndex: number = getActiveIndex();
 
   @Element() host: HTMLElement;
+
+  inactivityTimer: number;
 
   @Listen("keydown")
   handleKeyDown(event: KeyboardEvent) {
@@ -80,6 +84,18 @@ export class Presentation {
     if (this.activeIndex > 0) {
       changeActiveIndex(-1);
     }
+  }
+
+  @Listen("mousemove")
+  handleMouseMove() {
+    if (this.inactivityTimer) {
+      window.clearTimeout(this.inactivityTimer);
+    }
+    this.host.classList.remove("inactive");
+    this.inactivityTimer = window.setTimeout(
+      () => this.host.classList.add("inactive"),
+      INACTIVITY_TIMEOUT
+    );
   }
 
   componentDidLoad() {
