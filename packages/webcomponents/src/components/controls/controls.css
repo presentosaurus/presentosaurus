@@ -7,7 +7,7 @@ pyro-controls {
   transition: opacity 0.5s;
 }
 
-pyro-presentation.inactive:fullscreen pyro-controls {
+pyro-presentation.inactive:fullscreen pyro-controls:not(:focus-within) {
   opacity: 0;
 }
 
