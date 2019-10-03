@@ -2606,6 +2606,11 @@ asap@^2.0.0:
   resolved "https://registry.yarnpkg.com/asap/-/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
   integrity sha1-5QNHYR1+aQlDIIu9r+vLwvuGbUY=
 
+asciimath2tex@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/asciimath2tex/-/asciimath2tex-1.1.0.tgz#c09b720f1a602f0e6d991c302ce2e09a70a64bdc"
+  integrity sha512-peQUT7lMbtRd7FnYiiqzTofhpj9IZggvinPbqJpPYOx8FLStaXPCr4WiS8lyTXcIOCtabHMe6GrQNqKwDZ68yw==
+
 asn1.js@^4.0.0:
   version "4.10.1"
   resolved "https://registry.yarnpkg.com/asn1.js/-/asn1.js-4.10.1.tgz#b9c2bf5805f1e64aadeed6df3a2bfafb5a73f5a0"

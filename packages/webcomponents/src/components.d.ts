@@ -15,6 +15,7 @@ export namespace Components {
   }
   interface PyroControls {}
   interface PyroMath {
+    asciiMath: boolean;
     expression: string;
     inline: boolean;
   }
@@ -107,6 +108,7 @@ declare namespace LocalJSX {
     onToggleFullscreen?: (event: CustomEvent<any>) => void;
   }
   interface PyroMath {
+    asciiMath?: boolean;
     expression?: string;
     inline?: boolean;
   }
