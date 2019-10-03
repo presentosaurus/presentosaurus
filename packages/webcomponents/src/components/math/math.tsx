@@ -7,7 +7,7 @@ import AsciiMathParser from "asciimath2tex";
   tag: "pyro-math",
   styleUrl: "math.css"
 })
-export class Code {
+export class Math {
   @Prop() expression: string = "";
   @Prop() inline: boolean = false;
   @Prop() asciiMath: boolean = false;

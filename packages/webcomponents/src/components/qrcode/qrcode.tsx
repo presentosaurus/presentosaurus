@@ -9,7 +9,7 @@ const QRCodeOptions: QRCodeRenderersOptions = {
   tag: "pyro-qrcode",
   styleUrl: "qrcode.css"
 })
-export class Code {
+export class Qrcode {
   @Prop() content: string;
 
   el: HTMLCanvasElement;
