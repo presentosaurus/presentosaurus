@@ -5,9 +5,11 @@ import {
   State,
   Host,
   Element,
-  Listen
+  Listen,
+  Watch
 } from "@stencil/core";
 import { toggleFullscreen } from "../../utils/fullscreen";
+import { PresentationContext } from "../../state/presentation-context";
 
 const INACTIVITY_TIMEOUT = 3000;
 
@@ -27,6 +29,17 @@ export class Presentation {
   @Prop() author: string;
   @Prop() url: string;
   @Prop() numbering: boolean;
+  @Prop() options: object | string;
+
+  @State() innerOptions: object = {};
+
+  @Watch("options")
+  parseOptions(options: object | string) {
+    if (options) {
+      this.innerOptions =
+        typeof options === "object" ? options : JSON.parse(options);
+    }
+  }
 
   @State() activeIndex: number = getActiveIndex();
 
@@ -62,6 +75,10 @@ export class Presentation {
   @Listen("toggleFullscreen")
   handleToggleFullscreen() {
     toggleFullscreen(this.host);
+  }
+
+  componentWillLoad() {
+    this.parseOptions(this.options);
   }
 
   componentDidRender() {
@@ -104,24 +121,29 @@ export class Presentation {
     };
   }
 
+  // required for PresentationContext
+  connectedCallback() {}
+
   render() {
     return (
       <Host tabindex="0">
-        <pyro-slide no-number>
-          <pyro-qrcode content={this.url}></pyro-qrcode>
-          <div>
-            <slot name="presentation-title">
-              <h1>{this.presentationTitle}</h1>
-            </slot>
-            <slot name="subtitle">
-              <h2>{this.subtitle}</h2>
-            </slot>
-            <slot name="author">
-              <h3>{this.author}</h3>
-            </slot>
-          </div>
-        </pyro-slide>
-        <slot />
+        <PresentationContext.Provider state={this.innerOptions}>
+          <pyro-slide no-number>
+            <pyro-qrcode content={this.url}></pyro-qrcode>
+            <div>
+              <slot name="presentation-title">
+                <h1>{this.presentationTitle}</h1>
+              </slot>
+              <slot name="subtitle">
+                <h2>{this.subtitle}</h2>
+              </slot>
+              <slot name="author">
+                <h3>{this.author}</h3>
+              </slot>
+            </div>
+          </pyro-slide>
+          <slot />
+        </PresentationContext.Provider>
         <pyro-controls></pyro-controls>
       </Host>
     );

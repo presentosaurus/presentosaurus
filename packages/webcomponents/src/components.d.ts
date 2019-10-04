@@ -22,6 +22,7 @@ export namespace Components {
   interface PyroPresentation {
     author: string;
     numbering: boolean;
+    options: object | string;
     presentationTitle: string;
     subtitle: string;
     url: string;
@@ -115,6 +116,7 @@ declare namespace LocalJSX {
   interface PyroPresentation {
     author?: string;
     numbering?: boolean;
+    options?: object | string;
     presentationTitle?: string;
     subtitle?: string;
     url?: string;

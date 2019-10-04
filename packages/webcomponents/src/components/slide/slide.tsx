@@ -1,4 +1,5 @@
 import { Component, h, Host, Prop } from "@stencil/core";
+import { PresentationContext } from "../../state/presentation-context";
 
 @Component({
   tag: "pyro-slide",
@@ -31,3 +32,5 @@ export class Slide {
     );
   }
 }
+
+PresentationContext.injectProps(Slide, "pyro-slide");

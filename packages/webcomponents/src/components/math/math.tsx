@@ -2,6 +2,7 @@ import { Component, Prop, Element } from "@stencil/core";
 import katex from "katex";
 import "katex/dist/contrib/mhchem.min";
 import AsciiMathParser from "asciimath2tex";
+import { PresentationContext } from "../../state/presentation-context";
 
 @Component({
   tag: "pyro-math",
@@ -23,3 +24,5 @@ export class Math {
     katex.render(expression, this.el, { displayMode: !this.inline });
   }
 }
+
+PresentationContext.injectProps(Math, "pyro-math");

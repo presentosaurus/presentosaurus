@@ -3,6 +3,7 @@ import Prism from "prismjs";
 import "prismjs/plugins/line-numbers/prism-line-numbers.min";
 import "prismjs/plugins/line-highlight/prism-line-highlight.min";
 import "prismjs/plugins/autoloader/prism-autoloader.min";
+import { PresentationContext } from "../../state/presentation-context";
 
 Prism.plugins.autoloader.languages_path = "prismjs/components/";
 
@@ -41,3 +42,5 @@ export class Code {
     );
   }
 }
+
+PresentationContext.injectProps(Code, "pyro-code");

@@ -4,13 +4,14 @@
 
 ## Properties
 
-| Property            | Attribute            | Description | Type      | Default     |
-| ------------------- | -------------------- | ----------- | --------- | ----------- |
-| `author`            | `author`             |             | `string`  | `undefined` |
-| `numbering`         | `numbering`          |             | `boolean` | `undefined` |
-| `presentationTitle` | `presentation-title` |             | `string`  | `undefined` |
-| `subtitle`          | `subtitle`           |             | `string`  | `undefined` |
-| `url`               | `url`                |             | `string`  | `undefined` |
+| Property            | Attribute            | Description | Type               | Default     |
+| ------------------- | -------------------- | ----------- | ------------------ | ----------- |
+| `author`            | `author`             |             | `string`           | `undefined` |
+| `numbering`         | `numbering`          |             | `boolean`          | `undefined` |
+| `options`           | `options`            |             | `object \| string` | `undefined` |
+| `presentationTitle` | `presentation-title` |             | `string`           | `undefined` |
+| `subtitle`          | `subtitle`           |             | `string`           | `undefined` |
+| `url`               | `url`                |             | `string`           | `undefined` |
 
 ## Dependencies
 
