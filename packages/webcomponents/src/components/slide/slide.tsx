@@ -1,5 +1,4 @@
-import { Component, h, Host, Prop } from "@stencil/core";
-import { PresentationContext } from "../../state/presentation-context";
+import { Component, h, Host, Prop, Event, EventEmitter } from "@stencil/core";
 
 @Component({
   tag: "pyro-slide",
@@ -10,6 +9,12 @@ export class Slide {
   @Prop() backgroundColor: string;
   @Prop() backgroundImage: string;
   @Prop() backgroundIframe: string;
+
+  @Event() injectProps: EventEmitter;
+
+  connectedCallback() {
+    this.injectProps.emit(this);
+  }
 
   render() {
     const imageUrl = `url("${this.backgroundImage}")`;
@@ -32,5 +37,3 @@ export class Slide {
     );
   }
 }
-
-PresentationContext.injectProps(Slide, "pyro-slide");

@@ -11,6 +11,12 @@
 | `backgroundImage`  | `background-image`  |             | `string` | `undefined` |
 | `slideTitle`       | `slide-title`       |             | `string` | `undefined` |
 
+## Events
+
+| Event         | Description | Type               |
+| ------------- | ----------- | ------------------ |
+| `injectProps` |             | `CustomEvent<any>` |
+
 ## Dependencies
 
 ### Used by

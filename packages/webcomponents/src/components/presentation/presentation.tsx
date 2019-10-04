@@ -9,7 +9,6 @@ import {
   Watch
 } from "@stencil/core";
 import { toggleFullscreen } from "../../utils/fullscreen";
-import { PresentationContext } from "../../state/presentation-context";
 
 const INACTIVITY_TIMEOUT = 3000;
 
@@ -82,15 +81,17 @@ export class Presentation {
   }
 
   componentDidRender() {
-    Array.from(this.host.children).forEach(child =>
+    Array.from(this.host.children[0].children).forEach(child =>
       child.classList.remove("active")
     );
-    Array.from(this.host.children)[this.activeIndex].classList.add("active");
+    Array.from(this.host.children[0].children)[this.activeIndex].classList.add(
+      "active"
+    );
   }
 
   @Listen("nextSlide")
   incrementActiveIndex() {
-    const maxIndex = Array.from(this.host.children).length - 1;
+    const maxIndex = Array.from(this.host.children[0].children).length - 1;
     if (this.activeIndex < maxIndex) {
       changeActiveIndex(1);
     }
@@ -127,7 +128,7 @@ export class Presentation {
   render() {
     return (
       <Host tabindex="0">
-        <PresentationContext.Provider state={this.innerOptions}>
+        <pyro-provider state={this.innerOptions}>
           <pyro-slide no-number>
             <pyro-qrcode content={this.url}></pyro-qrcode>
             <div>
@@ -143,7 +144,7 @@ export class Presentation {
             </div>
           </pyro-slide>
           <slot />
-        </PresentationContext.Provider>
+        </pyro-provider>
         <pyro-controls></pyro-controls>
       </Host>
     );

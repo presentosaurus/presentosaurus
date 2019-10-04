@@ -1,8 +1,7 @@
-import { Component, Prop, Element } from "@stencil/core";
+import { Component, Prop, Element, Event, EventEmitter } from "@stencil/core";
 import katex from "katex";
 import "katex/dist/contrib/mhchem.min";
 import AsciiMathParser from "asciimath2tex";
-import { PresentationContext } from "../../state/presentation-context";
 
 @Component({
   tag: "pyro-math",
@@ -13,9 +12,15 @@ export class Math {
   @Prop() inline: boolean = false;
   @Prop() asciiMath: boolean = false;
 
+  @Event() injectProps: EventEmitter;
+
   @Element() el: HTMLElement;
 
   asciiMathParser = new AsciiMathParser();
+
+  connectedCallback() {
+    this.injectProps.emit(this);
+  }
 
   componentDidLoad() {
     const expression = this.asciiMath
@@ -24,5 +29,3 @@ export class Math {
     katex.render(expression, this.el, { displayMode: !this.inline });
   }
 }
-
-PresentationContext.injectProps(Math, "pyro-math");

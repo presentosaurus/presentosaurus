@@ -17,6 +17,7 @@
 
 ### Depends on
 
+- [pyro-provider](../provider)
 - [pyro-slide](../slide)
 - [pyro-qrcode](../qrcode)
 - [pyro-controls](../controls)
@@ -25,6 +26,7 @@
 
 ```mermaid
 graph TD;
+  pyro-presentation --> pyro-provider
   pyro-presentation --> pyro-slide
   pyro-presentation --> pyro-qrcode
   pyro-presentation --> pyro-controls

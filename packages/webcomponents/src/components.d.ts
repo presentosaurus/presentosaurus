@@ -27,6 +27,9 @@ export namespace Components {
     subtitle: string;
     url: string;
   }
+  interface PyroProvider {
+    state: { [key: string]: any };
+  }
   interface PyroQrcode {
     content: string;
   }
@@ -71,6 +74,14 @@ declare global {
     new (): HTMLPyroPresentationElement;
   };
 
+  interface HTMLPyroProviderElement
+    extends Components.PyroProvider,
+      HTMLStencilElement {}
+  var HTMLPyroProviderElement: {
+    prototype: HTMLPyroProviderElement;
+    new (): HTMLPyroProviderElement;
+  };
+
   interface HTMLPyroQrcodeElement
     extends Components.PyroQrcode,
       HTMLStencilElement {}
@@ -91,6 +102,7 @@ declare global {
     "pyro-controls": HTMLPyroControlsElement;
     "pyro-math": HTMLPyroMathElement;
     "pyro-presentation": HTMLPyroPresentationElement;
+    "pyro-provider": HTMLPyroProviderElement;
     "pyro-qrcode": HTMLPyroQrcodeElement;
     "pyro-slide": HTMLPyroSlideElement;
   }
@@ -101,6 +113,7 @@ declare namespace LocalJSX {
     highlightLines?: string;
     language?: string;
     lineNumbers?: boolean;
+    onInjectProps?: (event: CustomEvent<any>) => void;
     src?: string;
   }
   interface PyroControls {
@@ -112,6 +125,7 @@ declare namespace LocalJSX {
     asciiMath?: boolean;
     expression?: string;
     inline?: boolean;
+    onInjectProps?: (event: CustomEvent<any>) => void;
   }
   interface PyroPresentation {
     author?: string;
@@ -121,6 +135,9 @@ declare namespace LocalJSX {
     subtitle?: string;
     url?: string;
   }
+  interface PyroProvider {
+    state?: { [key: string]: any };
+  }
   interface PyroQrcode {
     content?: string;
   }
@@ -128,6 +145,7 @@ declare namespace LocalJSX {
     backgroundColor?: string;
     backgroundIframe?: string;
     backgroundImage?: string;
+    onInjectProps?: (event: CustomEvent<any>) => void;
     slideTitle?: string;
   }
 
@@ -136,6 +154,7 @@ declare namespace LocalJSX {
     "pyro-controls": PyroControls;
     "pyro-math": PyroMath;
     "pyro-presentation": PyroPresentation;
+    "pyro-provider": PyroProvider;
     "pyro-qrcode": PyroQrcode;
     "pyro-slide": PyroSlide;
   }
@@ -154,6 +173,8 @@ declare module "@stencil/core" {
         JSXBase.HTMLAttributes<HTMLPyroMathElement>;
       "pyro-presentation": LocalJSX.PyroPresentation &
         JSXBase.HTMLAttributes<HTMLPyroPresentationElement>;
+      "pyro-provider": LocalJSX.PyroProvider &
+        JSXBase.HTMLAttributes<HTMLPyroProviderElement>;
       "pyro-qrcode": LocalJSX.PyroQrcode &
         JSXBase.HTMLAttributes<HTMLPyroQrcodeElement>;
       "pyro-slide": LocalJSX.PyroSlide &

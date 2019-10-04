@@ -10,6 +10,12 @@
 | `expression` | `expression` |             | `string`  | `""`    |
 | `inline`     | `inline`     |             | `boolean` | `false` |
 
+## Events
+
+| Event         | Description | Type               |
+| ------------- | ----------- | ------------------ |
+| `injectProps` |             | `CustomEvent<any>` |
+
 ---
 
 _Built with [StencilJS](https://stenciljs.com/)_
