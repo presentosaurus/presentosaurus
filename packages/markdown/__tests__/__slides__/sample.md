@@ -1,3 +1,10 @@
+pyro-code: 
+  lineNumbers: true
+pyro-math: 
+  asciiMath: true
+
+---
+
 # Sample Presentation
 
 ---
@@ -9,4 +16,5 @@
 
 ---
 
-quack lol
+quack
+lol

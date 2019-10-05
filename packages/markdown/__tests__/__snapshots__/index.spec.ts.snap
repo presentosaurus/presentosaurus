@@ -1,15 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render snapshot of empty.md 1`] = `
-"<pyro-presentation>
-<pyro-slide>
+"<pyro-presentation options='{}'>
 
-</pyro-slide>
 </pyro-presentation>"
 `;
 
 exports[`should render snapshot of sample.md 1`] = `
-"<pyro-presentation>
+"<pyro-presentation options='{\\"pyro-code\\":{\\"lineNumbers\\":true},\\"pyro-math\\":{\\"asciiMath\\":true}}'>
 <pyro-slide>
 <h1 id=\\"sample-presentation\\">Sample Presentation</h1>
 </pyro-slide>
