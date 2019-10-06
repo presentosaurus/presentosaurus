@@ -1,7 +1,11 @@
 import { Configuration } from "webpack";
 import HtmlWebPackPlugin from "html-webpack-plugin";
+import { resolve } from "path";
+
+const publicPath = resolve(__dirname, "../public");
 
 const config: Configuration = {
+  entry: resolve(publicPath, "index.js"),
   mode: "development",
   devServer: {
     open: true,
@@ -21,8 +25,7 @@ const config: Configuration = {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./src/index.html",
-      filename: "./index.html"
+      template: resolve(publicPath, "index.html")
     })
   ]
 };
