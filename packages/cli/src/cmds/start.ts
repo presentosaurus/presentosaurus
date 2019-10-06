@@ -1,8 +1,7 @@
 import { CommandModule } from "yargs";
-import { resolve } from "path";
 import Webpack from "webpack";
 import WebpackDevServer from "webpack-dev-server";
-import webpackConfig from "../webpack.config";
+import config from "../webpack.config";
 
 const command: CommandModule<{}, { slides: string }> = {
   command: "start <slides>",
@@ -14,11 +13,7 @@ const command: CommandModule<{}, { slides: string }> = {
       describe: "path to markdown file"
     }),
   handler: argv => {
-    webpackConfig.resolve = webpackConfig.resolve || {};
-    webpackConfig.resolve.alias = {
-      mdslides: resolve(argv.slides)
-    };
-
+    const webpackConfig = config(process.env, argv);
     WebpackDevServer.addDevServerEntrypoints(
       webpackConfig,
       webpackConfig.devServer || {}
