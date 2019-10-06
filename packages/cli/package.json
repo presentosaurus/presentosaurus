@@ -13,13 +13,23 @@
     "build": "tsc"
   },
   "devDependencies": {
+    "@types/html-webpack-plugin": "3.2.1",
     "@types/prettier": "1.18.2",
+    "@types/webpack": "4.39.2",
+    "@types/webpack-dev-server": "3.1.7",
     "typescript": "3.6.3"
   },
   "dependencies": {
     "@pyroslides/markdown": "0.0.0",
+    "@pyroslides/webcomponents": "0.0.0",
     "chalk": "2.4.2",
+    "css-loader": "3.2.0",
+    "html-webpack-plugin": "3.2.0",
     "prettier": "1.18.2",
+    "raw-loader": "3.1.0",
+    "style-loader": "1.0.0",
+    "webpack": "4.41.0",
+    "webpack-dev-server": "3.8.2",
     "yargs": "14.0.0"
   }
 }
