@@ -18,7 +18,7 @@ export class Math {
 
   asciiMathParser = new AsciiMathParser();
 
-  connectedCallback() {
+  componentWillLoad() {
     this.injectProps.emit(this);
   }
 

@@ -45,7 +45,7 @@ export class Provider {
   updateListener = (prop: keyof T, instance: any) => {
     const state = this.state[prop] || {};
     Object.entries(state).forEach(([key, value]) => {
-      instance[key] = value;
+      if (instance[key] !== value) instance[key] = value;
     });
   };
 

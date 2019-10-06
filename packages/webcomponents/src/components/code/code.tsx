@@ -23,7 +23,7 @@ export class Code {
     Prism.highlightAll();
   }
 
-  connectedCallback() {
+  componentWillLoad() {
     this.injectProps.emit(this);
   }
 

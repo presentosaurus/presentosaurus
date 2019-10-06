@@ -122,9 +122,6 @@ export class Presentation {
     };
   }
 
-  // required for PresentationContext
-  connectedCallback() {}
-
   render() {
     return (
       <Host tabindex="0">

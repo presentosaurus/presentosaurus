@@ -12,7 +12,7 @@ export class Slide {
 
   @Event() injectProps: EventEmitter;
 
-  connectedCallback() {
+  componentWillLoad() {
     this.injectProps.emit(this);
   }
 
