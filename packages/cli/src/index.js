@@ -4,6 +4,6 @@ import "@pyroslides/webcomponents/dist/pyro/pyro.css";
 
 defineCustomElements(window);
 
-import mdslides from "./index.md";
+import mdslides from "mdslides";
 
 document.body.innerHTML = mdToHtml(mdslides);
