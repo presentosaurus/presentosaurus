@@ -4,9 +4,6 @@ on:
   pull_request:
     branches:
       - master
-  push:
-    branches:
-      - master
 
 jobs:
   build:
@@ -16,7 +13,7 @@ jobs:
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
-          version: 12.x
+          node-version: 12.x
       - name: yarn install, yarn test, yarn build
         run: |
           yarn install
