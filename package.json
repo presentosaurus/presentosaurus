@@ -7,7 +7,7 @@
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "start": "lerna run start",
+    "start": "lerna run start --parallel",
     "build": "lerna run build",
     "test": "lerna run test"
   },
