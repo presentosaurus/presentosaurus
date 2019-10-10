@@ -18,7 +18,7 @@
     "@types/prettier": "1.18.3",
     "@types/webpack": "4.39.2",
     "@types/webpack-dev-server": "3.1.7",
-    "typescript": "3.6.3"
+    "typescript": "3.6.4"
   },
   "dependencies": {
     "@pyroslides/markdown": "0.0.0",
