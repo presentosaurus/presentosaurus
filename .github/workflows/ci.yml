@@ -8,6 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 1
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js 12.x
