@@ -1,3 +1,4 @@
+build/
 dist/
 bin/
 lib/
@@ -27,9 +28,6 @@ UserInterfaceState.xcuserstate
 .env
 
 # docusaurus
-
-# production
-build/
 
 # generated files
 .docusaurus
