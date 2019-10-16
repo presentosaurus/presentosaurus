@@ -1,10 +1,15 @@
-import { Converter } from "showdown";
+import unified from "unified";
+import markdown from "remark-parse";
+import remark2rehype from "remark-rehype";
+import format from "rehype-format";
+import html from "rehype-stringify";
 import YAML from "yaml";
-import { pyroExtension } from "./pyro-markdown-extension";
 
-const converter = new Converter({ extensions: [pyroExtension] });
-converter.setFlavor("github");
-converter.setOption("simpleLineBreaks", false);
+const converter = unified()
+  .use(markdown)
+  .use(remark2rehype)
+  .use(format)
+  .use(html);
 
 export const mdToHtml = (md: string) => {
   const [options, ...mdslides] = md.split("\n---\n");
@@ -12,8 +17,8 @@ export const mdToHtml = (md: string) => {
   const optionsProp = JSON.stringify(YAML.parse(options) || {});
 
   const slides = mdslides
-    .map(s => converter.makeHtml(s))
-    .map(s => `<pyro-slide>\n${s}\n</pyro-slide>`)
+    .map(s => converter.processSync(s))
+    .map(s => `<pyro-slide>${s}</pyro-slide>`)
     .join("\n");
   return `<pyro-presentation options='${optionsProp}'>\n${slides}\n</pyro-presentation>`;
 };
