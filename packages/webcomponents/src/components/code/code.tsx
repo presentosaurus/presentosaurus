@@ -18,7 +18,7 @@ export class Code {
 
   @Event() injectProps: EventEmitter;
 
-  componentDidLoad() {
+  componentDidRender() {
     Prism.fileHighlight();
     Prism.highlightAll();
   }
