@@ -18,3 +18,9 @@ pyro-math:
 
 quack
 lol
+
+---
+
+```js
+const a = b
+```

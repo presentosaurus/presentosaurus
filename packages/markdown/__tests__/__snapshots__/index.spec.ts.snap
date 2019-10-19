@@ -24,5 +24,8 @@ exports[`should render snapshot of sample.md 1`] = `
   lol
 </p>
 </pyro-slide>
+<pyro-slide>
+<pyro-code language=\\"js\\">const a = b</pyro-code>
+</pyro-slide>
 </pyro-presentation>"
 `;
