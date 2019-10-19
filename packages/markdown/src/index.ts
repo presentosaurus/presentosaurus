@@ -4,10 +4,11 @@ import remark2rehype from "remark-rehype";
 import format from "rehype-format";
 import html from "rehype-stringify";
 import YAML from "yaml";
+import { handlers } from "./handlers";
 
 const converter = unified()
   .use(markdown)
-  .use(remark2rehype)
+  .use(remark2rehype, { handlers })
   .use(format)
   .use(html);
 
