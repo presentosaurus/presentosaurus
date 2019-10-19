@@ -14,7 +14,7 @@ export class Qrcode {
 
   el: HTMLCanvasElement;
 
-  componentDidLoad() {
+  componentDidRender() {
     if (this.content) QRCode.toCanvas(this.el, this.content, QRCodeOptions);
   }
 

@@ -22,7 +22,7 @@ export class Math {
     this.injectProps.emit(this);
   }
 
-  componentDidLoad() {
+  componentDidRender() {
     const expression = this.asciiMath
       ? this.asciiMathParser.parse(this.expression)
       : this.expression;
