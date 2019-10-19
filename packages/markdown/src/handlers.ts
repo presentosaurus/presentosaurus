@@ -11,6 +11,27 @@ const code = (h, node) => {
   return h(node.position, "pyro-code", props, [u("text", value)]);
 };
 
+const math = (h, node) => {
+  const value = node.value ? detab(node.value) : "";
+  const props = {
+    expression: value
+  };
+
+  return h(node.position, "pyro-math", props);
+};
+
+const inlineMath = (h, node) => {
+  const value = node.value ? detab(node.value) : "";
+  const props = {
+    expression: value,
+    inline: true
+  };
+
+  return h(node.position, "pyro-math", props);
+};
+
 export const handlers = {
-  code
+  code,
+  math,
+  inlineMath
 };

@@ -20,9 +20,9 @@ exports[`should render snapshot of sample.md 1`] = `
 </pyro-slide>
 <pyro-slide>
 <p>
-  quack
-  lol
+  <pyro-math expression=\\"\\\\frac{1}{2}\\" inline></pyro-math>
 </p>
+<pyro-math expression=\\"\\\\int f\\"></pyro-math>
 </pyro-slide>
 <pyro-slide>
 <pyro-code language=\\"js\\">const a = b</pyro-code>
