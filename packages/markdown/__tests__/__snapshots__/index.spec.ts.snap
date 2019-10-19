@@ -25,7 +25,10 @@ exports[`should render snapshot of sample.md 1`] = `
 <pyro-math expression=\\"\\\\int f\\"></pyro-math>
 </pyro-slide>
 <pyro-slide>
-<pyro-code language=\\"js\\">const a = b</pyro-code>
+<pre><pyro-code language=\\"js\\">const add = (a, b) => {
+  return a + b
+}
+</pyro-code></pre>
 </pyro-slide>
 </pyro-presentation>"
 `;

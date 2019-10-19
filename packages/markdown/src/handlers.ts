@@ -8,7 +8,9 @@ const code = (h, node) => {
     language
   };
 
-  return h(node.position, "pyro-code", props, [u("text", value)]);
+  return h(node.position, "pre", [
+    h(node, "pyro-code", props, [u("text", value)])
+  ]);
 };
 
 const math = (h, node) => {
