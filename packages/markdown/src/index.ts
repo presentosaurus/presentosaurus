@@ -1,5 +1,6 @@
 import unified from "unified";
 import markdown from "remark-parse";
+import math from "remark-math";
 import remark2rehype from "remark-rehype";
 import format from "rehype-format";
 import html from "rehype-stringify";
@@ -8,6 +9,7 @@ import { handlers } from "./handlers";
 
 const converter = unified()
   .use(markdown)
+  .use(math)
   .use(remark2rehype, { handlers })
   .use(format)
   .use(html);

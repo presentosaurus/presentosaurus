@@ -16,8 +16,11 @@ pyro-math:
 
 ---
 
-quack
-lol
+$\frac{1}{2}$
+
+$$
+\int f
+$$
 
 ---
 
