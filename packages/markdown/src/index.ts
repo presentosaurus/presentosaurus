@@ -5,6 +5,7 @@ import remark2rehype from "remark-rehype";
 import format from "rehype-format";
 import html from "rehype-stringify";
 import YAML from "yaml";
+import merge from "deepmerge";
 import { handlers } from "./handlers";
 
 const converter = unified()
@@ -14,10 +15,15 @@ const converter = unified()
   .use(format)
   .use(html);
 
-export const mdToHtml = (md: string) => {
-  const [options, ...mdslides] = md.split("\n---\n");
+export const mdToHtml = (md: string, options?) => {
+  const [yamlOptions, ...mdslides] = md.split("\n---\n");
 
-  const optionsProp = JSON.stringify(YAML.parse(options) || {});
+  const presentationOptions = merge(
+    options || {},
+    YAML.parse(yamlOptions) || {}
+  );
+
+  const optionsProp = JSON.stringify(presentationOptions);
 
   const slides = mdslides
     .map(s => converter.processSync(s))
