@@ -16,16 +16,13 @@
   ],
   "scripts": {
     "build": "stencil build --docs",
-    "start": "stencil build --dev --watch --serve",
-    "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate"
+    "dev": "stencil build --dev --watch --serve",
+    "start": "stencil build --watch"
   },
   "devDependencies": {
     "@stencil/core": "1.7.3",
     "@types/katex": "0.10.2",
     "@types/qrcode": "1.3.4",
-    "jest": "24.9.0",
-    "jest-cli": "24.9.0",
     "material-design-icons": "3.0.1"
   },
   "dependencies": {
