@@ -23,10 +23,6 @@ const changeActiveIndex = (change: number) =>
   styleUrl: "presentation.css"
 })
 export class Presentation {
-  @Prop() presentationTitle: string;
-  @Prop() subtitle: string;
-  @Prop() author: string;
-  @Prop() url: string;
   @Prop() numbering: boolean;
   @Prop() options: object | string;
 
@@ -126,20 +122,6 @@ export class Presentation {
     return (
       <Host tabindex="0">
         <pyro-provider state={this.innerOptions}>
-          <pyro-slide no-number>
-            <pyro-qrcode content={this.url}></pyro-qrcode>
-            <div>
-              <slot name="presentation-title">
-                <h1>{this.presentationTitle}</h1>
-              </slot>
-              <slot name="subtitle">
-                <h2>{this.subtitle}</h2>
-              </slot>
-              <slot name="author">
-                <h3>{this.author}</h3>
-              </slot>
-            </div>
-          </pyro-slide>
           <slot />
         </pyro-provider>
         <pyro-controls></pyro-controls>

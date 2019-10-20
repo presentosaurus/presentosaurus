@@ -17,20 +17,6 @@
 | ------------- | ----------- | ------------------ |
 | `injectProps` |             | `CustomEvent<any>` |
 
-## Dependencies
-
-### Used by
-
-- [pyro-presentation](../presentation)
-
-### Graph
-
-```mermaid
-graph TD;
-  pyro-presentation --> pyro-slide
-  style pyro-slide fill:#f9f,stroke:#333,stroke-width:4px
-```
-
 ---
 
 _Built with [StencilJS](https://stenciljs.com/)_
