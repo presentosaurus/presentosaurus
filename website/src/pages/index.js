@@ -3,7 +3,7 @@ import classnames from "classnames";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import withBaseUrl from "@docusaurus/withBaseUrl";
+import useBaseUrl from "@docusaurus/useBaseUrl";
 import styles from "./styles.module.css";
 
 const features = [
@@ -39,6 +39,21 @@ const features = [
   }
 ];
 
+function Feature({ imageUrl, title, description }) {
+  const imgUrl = useBaseUrl(imageUrl);
+  return (
+    <div className={classnames("col col--4", styles.feature)}>
+      {imgUrl && (
+        <div className="text--center">
+          <img className={styles.featureImage} src={imgUrl} alt={title} />
+        </div>
+      )}
+      <h3>{title}</h3>
+      <p>{description}</p>
+    </div>
+  );
+}
+
 function Home() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
@@ -57,7 +72,7 @@ function Home() {
                 "button button--outline button--secondary button--lg",
                 styles.getStarted
               )}
-              to={withBaseUrl("docs/doc1")}
+              to={useBaseUrl("docs/doc1")}
             >
               Get Started
             </Link>
@@ -69,23 +84,8 @@ function Home() {
           <section className={styles.features}>
             <div className="container">
               <div className="row">
-                {features.map(({ imageUrl, title, description }, idx) => (
-                  <div
-                    key={idx}
-                    className={classnames("col col--4", styles.feature)}
-                  >
-                    {imageUrl && (
-                      <div className="text--center">
-                        <img
-                          className={styles.featureImage}
-                          src={withBaseUrl(imageUrl)}
-                          alt={title}
-                        />
-                      </div>
-                    )}
-                    <h3>{title}</h3>
-                    <p>{description}</p>
-                  </div>
+                {features.map((props, idx) => (
+                  <Feature key={idx} {...props} />
                 ))}
               </div>
             </div>
