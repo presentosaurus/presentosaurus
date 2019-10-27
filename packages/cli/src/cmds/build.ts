@@ -1,8 +1,9 @@
 import { CommandModule } from "yargs";
 import { readFileSync, writeFileSync } from "fs";
-import { join, dirname, basename, extname } from "path";
+import { join, dirname, basename, extname, resolve } from "path";
+import { existsSync } from "fs";
+import YAML from "yaml";
 import chalk from "chalk";
-import { format } from "prettier";
 import { mdToHtml } from "@pyroslides/markdown";
 
 const replaceExt = (path: string, ext: string) => {
@@ -20,7 +21,15 @@ const command: CommandModule<{}, { slides: string }> = {
     }),
   handler: argv => {
     const md = readFileSync(argv.slides, { encoding: "utf8" });
-    const html = format(mdToHtml(md), { parser: "html" });
+    const pyroconfigPath = join(
+      dirname(resolve(argv.slides)),
+      "pyroconfig.yml"
+    );
+    const pyroconfigExists = existsSync(pyroconfigPath);
+    const options = pyroconfigExists
+      ? YAML.parse(readFileSync(pyroconfigPath, { encoding: "utf8" }))
+      : undefined;
+    const html = mdToHtml(md, options, true);
     const htmlPath = replaceExt(argv.slides, ".html");
     writeFileSync(htmlPath, html);
     console.log(chalk.green("Build successful."));
