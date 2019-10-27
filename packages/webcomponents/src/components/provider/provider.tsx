@@ -22,10 +22,9 @@ export class Provider {
 
   @Listen("injectProps")
   handleSubscription(event: CustomEvent) {
-    const unsubscribe = this.subscribe(
-      event.detail,
-      (event.target as any).tagName.toLowerCase()
-    );
+    const tagName: string = (event.target as any).tagName.toLowerCase();
+    const prop = tagName.replace(/^(pyro-)/, "");
+    const unsubscribe = this.subscribe(event.detail, prop);
     const disconnectedCallback = event.detail.disconnectedCallback;
 
     event.detail.disconnectedCallback = function() {

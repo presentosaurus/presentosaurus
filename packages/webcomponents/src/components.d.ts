@@ -42,7 +42,7 @@ declare global {
   interface HTMLPyroCodeElement
     extends Components.PyroCode,
       HTMLStencilElement {}
-  const HTMLPyroCodeElement: {
+  var HTMLPyroCodeElement: {
     prototype: HTMLPyroCodeElement;
     new (): HTMLPyroCodeElement;
   };
@@ -50,7 +50,7 @@ declare global {
   interface HTMLPyroControlsElement
     extends Components.PyroControls,
       HTMLStencilElement {}
-  const HTMLPyroControlsElement: {
+  var HTMLPyroControlsElement: {
     prototype: HTMLPyroControlsElement;
     new (): HTMLPyroControlsElement;
   };
@@ -58,7 +58,7 @@ declare global {
   interface HTMLPyroMathElement
     extends Components.PyroMath,
       HTMLStencilElement {}
-  const HTMLPyroMathElement: {
+  var HTMLPyroMathElement: {
     prototype: HTMLPyroMathElement;
     new (): HTMLPyroMathElement;
   };
@@ -66,7 +66,7 @@ declare global {
   interface HTMLPyroPresentationElement
     extends Components.PyroPresentation,
       HTMLStencilElement {}
-  const HTMLPyroPresentationElement: {
+  var HTMLPyroPresentationElement: {
     prototype: HTMLPyroPresentationElement;
     new (): HTMLPyroPresentationElement;
   };
@@ -74,7 +74,7 @@ declare global {
   interface HTMLPyroProviderElement
     extends Components.PyroProvider,
       HTMLStencilElement {}
-  const HTMLPyroProviderElement: {
+  var HTMLPyroProviderElement: {
     prototype: HTMLPyroProviderElement;
     new (): HTMLPyroProviderElement;
   };
@@ -82,7 +82,7 @@ declare global {
   interface HTMLPyroQrcodeElement
     extends Components.PyroQrcode,
       HTMLStencilElement {}
-  const HTMLPyroQrcodeElement: {
+  var HTMLPyroQrcodeElement: {
     prototype: HTMLPyroQrcodeElement;
     new (): HTMLPyroQrcodeElement;
   };
@@ -90,7 +90,7 @@ declare global {
   interface HTMLPyroSlideElement
     extends Components.PyroSlide,
       HTMLStencilElement {}
-  const HTMLPyroSlideElement: {
+  var HTMLPyroSlideElement: {
     prototype: HTMLPyroSlideElement;
     new (): HTMLPyroSlideElement;
   };

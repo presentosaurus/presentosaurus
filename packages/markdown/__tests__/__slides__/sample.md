@@ -1,6 +1,6 @@
-pyro-code: 
+code: 
   lineNumbers: true
-pyro-math: 
+math: 
   asciiMath: true
 
 ---
