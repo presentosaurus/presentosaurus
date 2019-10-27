@@ -10,7 +10,7 @@ exports[`should render snapshot of empty.md 1`] = `
 
 exports[`should render snapshot of sample.md 1`] = `
 "
-<pyro-presentation options=\\"{&#x22;pyro-code&#x22;:{&#x22;lineNumbers&#x22;:true},&#x22;pyro-math&#x22;:{&#x22;asciiMath&#x22;:true}}\\">
+<pyro-presentation options=\\"{&#x22;code&#x22;:{&#x22;lineNumbers&#x22;:true},&#x22;math&#x22;:{&#x22;asciiMath&#x22;:true}}\\">
   <pyro-slide>
     <h1>Sample Presentation</h1>
   </pyro-slide>
