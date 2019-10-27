@@ -11,3 +11,16 @@ test.each(slides)("should render snapshot of %s", slide => {
   });
   expect(mdToHtml(md)).toMatchSnapshot();
 });
+
+test("should render document", () => {
+  expect(mdToHtml("").startsWith("<!doctype html>")).toBe(false);
+  expect(mdToHtml("", undefined, true).startsWith("<!doctype html>")).toBe(
+    true
+  );
+});
+
+test("should use document options", () => {
+  expect(mdToHtml("", { document: { title: "titlestring" } }, true)).toMatch(
+    "<title>titlestring</title>"
+  );
+});

@@ -4900,6 +4900,11 @@ docsearch.js@^2.6.3:
     to-factory "^1.0.0"
     zepto "^1.2.0"
 
+doctype@^2.0.0:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/doctype/-/doctype-2.0.3.tgz#4aace4f3d9a86a1724782a266e814367553939f6"
+  integrity sha512-e7TTDW7yJ3kRJIUdp/w2bkOI8QWVxer0lg0kuAYfM0jzquuL5ZJ0GVfUiIA63ec4mfeTz0vffuoM/jEPUb8v+w==
+
 dom-converter@^0.2:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/dom-converter/-/dom-converter-0.2.0.tgz#6721a9daee2e293682955b6afe416771627bb768"
@@ -11144,6 +11149,15 @@ regjsparser@^0.6.0:
   integrity sha512-RQ7YyokLiQBomUJuUG8iGVvkgOLxwyZM8k6d3q5SAXpg4r5TZJZigKFvC6PpD+qQ98bCDC5YelPeA3EucDoNeQ==
   dependencies:
     jsesc "~0.5.0"
+
+rehype-document@3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/rehype-document/-/rehype-document-3.0.1.tgz#0535d7af2d4c3d200d2401f546e84b54e2de6f68"
+  integrity sha512-+nak0If9I4zKvgDILFDMnrvZn9yKIdhQ2ia0noYgQxGjSLK5RAueJoelHzxKB/3yiIvY1c9k6XGNN6iAQB/bhQ==
+  dependencies:
+    doctype "^2.0.0"
+    hastscript "^5.0.0"
+    unist-builder "^1.0.1"
 
 rehype-format@3.0.0:
   version "3.0.0"
