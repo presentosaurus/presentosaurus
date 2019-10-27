@@ -1,34 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render snapshot of empty.md 1`] = `
-"<pyro-presentation options='{}'>
-
-</pyro-presentation>"
+"
+<pyro-presentation options=\\"{}\\">
+  <pyro-slide></pyro-slide>
+</pyro-presentation>
+"
 `;
 
 exports[`should render snapshot of sample.md 1`] = `
-"<pyro-presentation options='{\\"pyro-code\\":{\\"lineNumbers\\":true},\\"pyro-math\\":{\\"asciiMath\\":true}}'>
-<pyro-slide>
-<h1>Sample Presentation</h1>
-</pyro-slide>
-<pyro-slide>
-<h2>Title</h2>
-<ul>
-  <li>meow</li>
-  <li>moo</li>
-</ul>
-</pyro-slide>
-<pyro-slide>
-<p>
-  <pyro-math expression=\\"\\\\frac{1}{2}\\" inline></pyro-math>
-</p>
-<pyro-math expression=\\"\\\\int f\\"></pyro-math>
-</pyro-slide>
-<pyro-slide>
-<pre><pyro-code language=\\"js\\">const add = (a, b) => {
+"
+<pyro-presentation options=\\"{&#x22;pyro-code&#x22;:{&#x22;lineNumbers&#x22;:true},&#x22;pyro-math&#x22;:{&#x22;asciiMath&#x22;:true}}\\">
+  <pyro-slide>
+    <h1>Sample Presentation</h1>
+  </pyro-slide>
+  <pyro-slide>
+    <h2>Title</h2>
+    <ul>
+      <li>meow</li>
+      <li>moo</li>
+    </ul>
+  </pyro-slide>
+  <pyro-slide>
+    <p>
+      <pyro-math expression=\\"\\\\frac{1}{2}\\" inline></pyro-math>
+    </p>
+    <pyro-math expression=\\"\\\\int f\\"></pyro-math>
+  </pyro-slide>
+  <pyro-slide>
+    <pre><pyro-code language=\\"js\\">const add = (a, b) => {
   return a + b
 }
 </pyro-code></pre>
-</pyro-slide>
-</pyro-presentation>"
+  </pyro-slide>
+</pyro-presentation>
+"
 `;
