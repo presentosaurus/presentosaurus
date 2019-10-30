@@ -2138,10 +2138,10 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@stencil/core@1.7.4":
-  version "1.7.4"
-  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-1.7.4.tgz#727cefad5174c8fa11ff527c809e936fd7e215e5"
-  integrity sha512-9Ges/ttTIB9jka59cWQcVR40G2I4jM1KPtv+wB5yEnQwaPQucURklfaodkuqYMq0zvI9e0da/Tvg/7Ydss4Hpg==
+"@stencil/core@1.7.5":
+  version "1.7.5"
+  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-1.7.5.tgz#2b8c6b5306b267d344e9cbd57fc0f87881b272c7"
+  integrity sha512-VlXKeN/FAqwaZ5yVWOZB+3biwL6TBZHEN8iWJIHnM7AskKCBDSSHXktPjBOCAuO2/kB82je712GrIpqRnMJGHA==
   dependencies:
     typescript "3.6.3"
 
