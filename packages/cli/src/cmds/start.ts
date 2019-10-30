@@ -1,7 +1,6 @@
 import { CommandModule } from "yargs";
-import Webpack from "webpack";
-import WebpackDevServer from "webpack-dev-server";
-import config from "../webpack.config";
+import browserSync from "browser-sync";
+import { replaceExt, transform } from "../transform";
 
 const command: CommandModule<{}, { slides: string }> = {
   command: "start <slides>",
@@ -13,16 +12,27 @@ const command: CommandModule<{}, { slides: string }> = {
       describe: "path to markdown file"
     }),
   handler: argv => {
-    const webpackConfig = config(process.env, argv);
-    WebpackDevServer.addDevServerEntrypoints(
-      webpackConfig,
-      webpackConfig.devServer || {}
-    );
-    const compiler = Webpack(webpackConfig);
-    const server = new WebpackDevServer(compiler, webpackConfig.devServer);
+    const bs = browserSync.create();
 
-    server.listen(8080, "127.0.0.1", () => {
-      console.log("Starting server on http://localhost:8080");
+    transform(argv.slides);
+
+    bs.init({
+      ui: false,
+      notify: false,
+      online: false,
+      startPath: replaceExt(argv.slides, ".html"),
+      reloadOnRestart: true,
+      logFileChanges: true,
+      server: true,
+      files: [
+        {
+          match: [argv.slides, "pyroconfig.yml"],
+          fn: () => {
+            transform(argv.slides);
+            bs.reload();
+          }
+        }
+      ]
     });
   }
 };
