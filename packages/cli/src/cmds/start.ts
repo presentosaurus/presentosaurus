@@ -26,7 +26,7 @@ const command: CommandModule<{}, { slides: string }> = {
       server: true,
       files: [
         {
-          match: [argv.slides, "pyroconfig.yml"],
+          match: [argv.slides, "pyroconfig.yaml", "pyroconfig.toml"],
           fn: () => {
             transform(argv.slides);
             bs.reload();
