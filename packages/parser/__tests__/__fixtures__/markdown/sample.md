@@ -1,7 +1,7 @@
 ---
-code: 
+code:
   lineNumbers: true
-math: 
+math:
   asciiMath: true
 ---
 
@@ -26,6 +26,6 @@ $$
 
 ```js
 const add = (a, b) => {
-  return a + b
-}
+  return a + b;
+};
 ```

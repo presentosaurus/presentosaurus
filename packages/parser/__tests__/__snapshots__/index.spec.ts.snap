@@ -1,9 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`should render snapshot of empty.adoc 1`] = `
+"
+<pyro-presentation options=\\"{}\\"></pyro-presentation>
+"
+`;
+
 exports[`should render snapshot of empty.md 1`] = `
 "
 <pyro-presentation options=\\"{}\\">
   <pyro-slide></pyro-slide>
+</pyro-presentation>
+"
+`;
+
+exports[`should render snapshot of sample.adoc 1`] = `
+"
+<pyro-presentation options=\\"{}\\">
+  <pyro-slide>
+    <h2>Title Slide</h2>
+    <div class=\\"paragraph\\">
+      <p>Wuff</p>
+    </div>
+  </pyro-slide>
+  <pyro-slide>
+    <h2>Slide One</h2>
+    <div class=\\"ulist\\">
+      <ul>
+        <li>
+          <p>Foo</p>
+        </li>
+        <li>
+          <p>Bar</p>
+        </li>
+        <li>
+          <p>World</p>
+        </li>
+      </ul>
+    </div>
+  </pyro-slide>
+  <pyro-slide>
+    <h2>Slide Two</h2>
+    <div class=\\"paragraph\\">
+      <p>A Great Story</p>
+    </div>
+  </pyro-slide>
 </pyro-presentation>
 "
 `;
@@ -29,8 +70,8 @@ exports[`should render snapshot of sample.md 1`] = `
   </pyro-slide>
   <pyro-slide>
     <pre><pyro-code language=\\"js\\">const add = (a, b) => {
-  return a + b
-}
+  return a + b;
+};
 </pyro-code></pre>
   </pyro-slide>
 </pyro-presentation>
