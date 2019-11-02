@@ -1,6 +1,6 @@
 import { readFileSync, writeFileSync, existsSync } from "fs";
 import { join, dirname, basename, extname, resolve } from "path";
-import { mdToHtml } from "@pyroslides/parser";
+import { mdToHtml, adocToHtml } from "@pyroslides/parser";
 import yaml from "yaml";
 import toml from "toml";
 
@@ -18,8 +18,9 @@ export const transform = (path: string) => {
     : tomlConfigExists
     ? toml.parse(readFileSync(tomlConfigPath, { encoding: "utf8" }))
     : undefined;
-  const md = readFileSync(path, { encoding: "utf8" });
-  const html = mdToHtml(md, options, true);
+  const content = readFileSync(path, { encoding: "utf8" });
+  const parser = extname(path) === ".md" ? mdToHtml : adocToHtml;
+  const html = parser(content, options, true);
   const htmlPath = replaceExt(path, ".html");
   writeFileSync(htmlPath, html);
 };
