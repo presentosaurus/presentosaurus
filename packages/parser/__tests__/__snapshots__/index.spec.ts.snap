@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`should render snapshot of empty.adoc 1`] = `
+"
+<pyro-presentation options=\\"{}\\"></pyro-presentation>
+"
+`;
+
 exports[`should render snapshot of empty.md 1`] = `
 "
 <pyro-presentation options=\\"{}\\">
@@ -10,16 +16,15 @@ exports[`should render snapshot of empty.md 1`] = `
 
 exports[`should render snapshot of sample.adoc 1`] = `
 "
-<div id=\\"preamble\\">
-  <div class=\\"sectionbody\\">
+<pyro-presentation options=\\"{}\\">
+  <pyro-slide>
+    <h2>Title Slide</h2>
     <div class=\\"paragraph\\">
       <p>Wuff</p>
     </div>
-  </div>
-</div>
-<div class=\\"sect1\\">
-  <h2 id=\\"_slide_one\\">Slide One</h2>
-  <div class=\\"sectionbody\\">
+  </pyro-slide>
+  <pyro-slide>
+    <h2>Slide One</h2>
     <div class=\\"ulist\\">
       <ul>
         <li>
@@ -33,16 +38,14 @@ exports[`should render snapshot of sample.adoc 1`] = `
         </li>
       </ul>
     </div>
-  </div>
-</div>
-<div class=\\"sect1\\">
-  <h2 id=\\"_slide_two\\">Slide Two</h2>
-  <div class=\\"sectionbody\\">
+  </pyro-slide>
+  <pyro-slide>
+    <h2>Slide Two</h2>
     <div class=\\"paragraph\\">
       <p>A Great Story</p>
     </div>
-  </div>
-</div>
+  </pyro-slide>
+</pyro-presentation>
 "
 `;
 

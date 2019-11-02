@@ -13,6 +13,7 @@ import toml from "toml";
 import { handlers } from "./handlers";
 import asciidoctor from "@asciidoctor/core";
 import parse from "rehype-parse";
+import { adocConverter } from "./adoc-converter";
 
 const extractFrontmatter = (md: string) => {
   const ast: any = unified()
@@ -44,11 +45,13 @@ export const mdToHtml = (md: string, options?, withDocument?: boolean) => {
   }
 
   converter.use(format).use(html);
-
   return String(converter.processSync(md));
 };
 
 export const adocToHtml = (md: string, options?, withDocument?: boolean) => {
+  asciidoctor().ConverterFactory.register(adocConverter(options || {}), [
+    "html5"
+  ]);
   const body = asciidoctor().convert(md);
   const converter = unified().use(parse, { fragment: true });
 
