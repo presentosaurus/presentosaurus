@@ -8,6 +8,44 @@ exports[`should render snapshot of empty.md 1`] = `
 "
 `;
 
+exports[`should render snapshot of sample.adoc 1`] = `
+"
+<div id=\\"preamble\\">
+  <div class=\\"sectionbody\\">
+    <div class=\\"paragraph\\">
+      <p>Wuff</p>
+    </div>
+  </div>
+</div>
+<div class=\\"sect1\\">
+  <h2 id=\\"_slide_one\\">Slide One</h2>
+  <div class=\\"sectionbody\\">
+    <div class=\\"ulist\\">
+      <ul>
+        <li>
+          <p>Foo</p>
+        </li>
+        <li>
+          <p>Bar</p>
+        </li>
+        <li>
+          <p>World</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class=\\"sect1\\">
+  <h2 id=\\"_slide_two\\">Slide Two</h2>
+  <div class=\\"sectionbody\\">
+    <div class=\\"paragraph\\">
+      <p>A Great Story</p>
+    </div>
+  </div>
+</div>
+"
+`;
+
 exports[`should render snapshot of sample.md 1`] = `
 "
 <pyro-presentation options=\\"{&#x22;code&#x22;:{&#x22;lineNumbers&#x22;:true},&#x22;math&#x22;:{&#x22;asciiMath&#x22;:true}}\\">
@@ -29,8 +67,8 @@ exports[`should render snapshot of sample.md 1`] = `
   </pyro-slide>
   <pyro-slide>
     <pre><pyro-code language=\\"js\\">const add = (a, b) => {
-  return a + b
-}
+  return a + b;
+};
 </pyro-code></pre>
   </pyro-slide>
 </pyro-presentation>

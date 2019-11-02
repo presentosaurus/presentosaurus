@@ -1,6 +1,6 @@
 import { readFileSync, writeFileSync, existsSync } from "fs";
 import { join, dirname, basename, extname, resolve } from "path";
-import { mdToHtml } from "@pyroslides/markdown";
+import { mdToHtml } from "@pyroslides/parser";
 import yaml from "yaml";
 import toml from "toml";
 

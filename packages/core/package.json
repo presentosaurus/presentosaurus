@@ -1,5 +1,5 @@
 {
-  "name": "@pyroslides/webcomponents",
+  "name": "@pyroslides/core",
   "version": "0.0.0",
   "description": "Pyroslides webcomponents",
   "main": "dist/index.js",
