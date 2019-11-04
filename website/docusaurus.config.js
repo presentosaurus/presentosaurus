@@ -14,7 +14,7 @@ module.exports = {
         src: "img/logo.svg"
       },
       links: [
-        { to: "docs/doc1", label: "Docs", position: "left" },
+        { to: "docs/configuration", label: "Docs", position: "left" },
         { to: "blog", label: "Blog", position: "left" },
         {
           href: "https://github.com/miguel-sc/pyro",
@@ -31,7 +31,7 @@ module.exports = {
           items: [
             {
               label: "Docs",
-              to: "docs/doc1"
+              to: "docs/configuration"
             }
           ]
         },
