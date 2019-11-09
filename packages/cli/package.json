@@ -21,7 +21,7 @@
   "dependencies": {
     "@pyroslides/parser": "0.0.0",
     "browser-sync": "2.26.7",
-    "chalk": "2.4.2",
+    "chalk": "3.0.0",
     "toml": "3.0.0",
     "yaml": "1.7.2",
     "yargs": "14.2.0"
