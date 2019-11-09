@@ -11713,13 +11713,13 @@ rehype-parse@6.0.1:
     parse5 "^5.0.0"
     xtend "^4.0.1"
 
-rehype-stringify@6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/rehype-stringify/-/rehype-stringify-6.0.0.tgz#a8a573b6f9bf98916955978acd746c37cfd88ac0"
-  integrity sha512-grV/hhA7z9GbUJZk0ILzprSE0YY9lvTmYuvgRjXdFXrrag5gNeqXBQIuG1m4zFW6PFm0YYnJ/qgf5y6yui4VsA==
+rehype-stringify@6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/rehype-stringify/-/rehype-stringify-6.0.1.tgz#b6aa9f84d5276c5d247c62fc1ea15983a35a4575"
+  integrity sha512-JfEPRDD4DiG7jet4md7sY07v6ACeb2x+9HWQtRPm2iA6/ic31hCv1SNBUtpolJASxQ/D8gicXiviW4TJKEMPKQ==
   dependencies:
     hast-util-to-html "^6.0.0"
-    xtend "^4.0.1"
+    xtend "^4.0.0"
 
 relateurl@^0.2.7:
   version "0.2.7"
