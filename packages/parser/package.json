@@ -24,7 +24,7 @@
     "remark-parse": "7.0.2",
     "remark-rehype": "5.0.0",
     "toml": "3.0.0",
-    "unified": "8.4.1",
+    "unified": "8.4.2",
     "yaml": "1.7.2"
   },
   "devDependencies": {
