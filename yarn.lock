@@ -11704,14 +11704,14 @@ rehype-minify-whitespace@^3.0.0:
     unist-util-is "^4.0.0"
     unist-util-modify-children "^1.0.0"
 
-rehype-parse@6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/rehype-parse/-/rehype-parse-6.0.1.tgz#a5401d7f4144d5e17cbb69be11f05a2a7ba87e27"
-  integrity sha512-FrGSbOzcGxIvWty1qHjKTvHT4WBTt7C6JLs65EkvFPa7ZKraSmsoDDj6al1eBxaXS1t/kiGdPYazUe58Mgflgw==
+rehype-parse@6.0.2:
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/rehype-parse/-/rehype-parse-6.0.2.tgz#aeb3fdd68085f9f796f1d3137ae2b85a98406964"
+  integrity sha512-0S3CpvpTAgGmnz8kiCyFLGuW5yA4OQhyNTm/nwPopZ7+PI11WnGl1TTWTGv/2hPEe/g2jRLlhVVSsoDH8waRug==
   dependencies:
     hast-util-from-parse5 "^5.0.0"
     parse5 "^5.0.0"
-    xtend "^4.0.1"
+    xtend "^4.0.0"
 
 rehype-stringify@6.0.1:
   version "6.0.1"
