@@ -14,7 +14,7 @@
   "dependencies": {
     "@asciidoctor/core": "2.0.3",
     "deepmerge": "4.2.2",
-    "rehype-document": "3.0.1",
+    "rehype-document": "3.1.0",
     "rehype-format": "3.0.0",
     "rehype-parse": "6.0.1",
     "rehype-stringify": "6.0.0",
