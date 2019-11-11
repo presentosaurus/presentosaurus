@@ -22,13 +22,11 @@
   "devDependencies": {
     "@stencil/core": "1.7.5",
     "@types/katex": "0.10.2",
-    "@types/qrcode": "1.3.4",
     "material-design-icons": "3.0.1"
   },
   "dependencies": {
     "asciimath2tex": "1.1.0",
     "katex": "0.11.1",
-    "prismjs": "1.17.1",
-    "qrcode": "1.4.3"
+    "prismjs": "1.17.1"
   }
 }
