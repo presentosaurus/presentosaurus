@@ -20,7 +20,7 @@
     "start": "stencil build --watch"
   },
   "devDependencies": {
-    "@stencil/core": "1.8.0",
+    "@stencil/core": "1.8.1",
     "@types/katex": "0.10.2",
     "material-design-icons": "3.0.1"
   },
