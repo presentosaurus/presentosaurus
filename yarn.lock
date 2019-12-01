@@ -11660,10 +11660,10 @@ regjsparser@^0.6.0:
   dependencies:
     jsesc "~0.5.0"
 
-rehype-document@3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/rehype-document/-/rehype-document-3.1.0.tgz#36a2cbe05a93fd6394578f26e406e55728869c72"
-  integrity sha512-kcTb7MdOjyA9yq45hNQgHvr2MHNEsAvQHTtdW+N3O9WaTvVnuwXoyLkRSSHZDQNmYQzEpar8FiIkPknMo6m9Vg==
+rehype-document@3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/rehype-document/-/rehype-document-3.2.0.tgz#eeb2c16b78a8269e41802d89ec100e8d5bb202d3"
+  integrity sha512-TzlPvrIfZLT5w/CuQ+drqCTGoZ/e68nlZfXQH8/PGdauwQGHQ2+WyJ6EUt8tqmKuWR6Xc3gb8oyKtVWtHZGoJA==
   dependencies:
     doctype "^2.0.0"
     hastscript "^5.0.0"
