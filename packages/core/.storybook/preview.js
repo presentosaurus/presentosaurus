@@ -1,5 +1,3 @@
-/* global window */
-
 import {
   configure,
   addParameters,
