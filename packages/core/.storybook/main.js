@@ -7,7 +7,6 @@ module.exports = {
     "@storybook/addon-storysource/register",
     "@storybook/addon-backgrounds/register",
     "@storybook/addon-links/register",
-    "@storybook/addon-options/register",
     "@storybook/addon-viewport/register"
   ]
 };

@@ -2640,15 +2640,6 @@
     prop-types "^15.7.2"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-options@5.3.0-beta.15":
-  version "5.3.0-beta.15"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-5.3.0-beta.15.tgz#8fd0f8db1249c996eb2d57c7cad9aef9264b138d"
-  integrity sha512-V4Y+ztxX3D/poPwdJgd1bR2vQ1hoBl5mWDs868J6cOtGhj1FQO01DeMVpc10Yw+IB/VZOIX1UqALXZRUHYJufw==
-  dependencies:
-    "@storybook/addons" "5.3.0-beta.15"
-    core-js "^3.0.1"
-    util-deprecate "^1.0.2"
-
 "@storybook/addon-storyshots@5.3.0-beta.15":
   version "5.3.0-beta.15"
   resolved "https://registry.yarnpkg.com/@storybook/addon-storyshots/-/addon-storyshots-5.3.0-beta.15.tgz#6a225a210460eb62d816c78e4a9ce5a07fd9f48a"
