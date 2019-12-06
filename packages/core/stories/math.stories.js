@@ -1,10 +1,9 @@
 import { html } from "lit-html";
-import { text, withKnobs, boolean } from "@storybook/addon-knobs";
+import { text, boolean } from "@storybook/addon-knobs";
 
 export default {
   title: "Math",
-  component: "pyro-math",
-  decorators: [withKnobs]
+  component: "pyro-math"
 };
 
 export const Math = () => html`
