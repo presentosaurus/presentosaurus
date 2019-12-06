@@ -17,12 +17,11 @@
   "scripts": {
     "build": "stencil build --docs",
     "dev": "stencil build --dev --watch --serve",
-    "start": "stencil build --watch"
+    "start": "stencil build --watch",
+    "storybook": "start-storybook -p 9009 -s www"
   },
   "devDependencies": {
     "@stencil/core": "1.8.1",
-    "@types/katex": "0.10.2",
-    "material-design-icons": "3.0.1",
     "@storybook/addon-a11y": "5.3.0-beta.15",
     "@storybook/addon-actions": "5.3.0-beta.15",
     "@storybook/addon-backgrounds": "5.3.0-beta.15",
@@ -43,11 +42,13 @@
     "@storybook/core-events": "5.3.0-beta.15",
     "@storybook/source-loader": "5.3.0-beta.15",
     "@storybook/web-components": "5.3.0-beta.15",
+    "@types/katex": "0.10.2",
     "babel-loader": "8.0.5",
     "eventemitter3": "4.0.0",
     "format-json": "1.0.3",
     "global": "4.3.2",
-    "lit-element": "2.2.1"
+    "lit-element": "2.2.1",
+    "material-design-icons": "3.0.1"
   },
   "dependencies": {
     "asciimath2tex": "1.1.0",
