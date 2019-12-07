@@ -7,6 +7,9 @@ update_configs:
       - match:
           dependency_type: all
           update_type: all
+    ignored_updates:
+      - match:
+          dependency_name: "@storybook/*"
     commit_message:
       prefix: fix
       prefix_development: chore
