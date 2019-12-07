@@ -18,7 +18,8 @@
     "build": "stencil build --docs",
     "dev": "stencil build --dev --watch --serve",
     "start": "stencil build --watch",
-    "storybook": "start-storybook -p 9009 -s www"
+    "start-storybook": "start-storybook -p 9009 -s www",
+    "build-storybook": "build-storybook -o build -s www"
   },
   "devDependencies": {
     "@stencil/core": "1.8.1",
