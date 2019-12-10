@@ -1,10 +1,13 @@
 pyro-controls {
-  position: absolute;
   display: flex;
+  transition: opacity 0.5s;
+}
+
+pyro-presentation pyro-controls {
+  position: absolute;
   z-index: 10;
   bottom: 0;
   right: 0;
-  transition: opacity 0.5s;
 }
 
 pyro-presentation.inactive:fullscreen pyro-controls:not(:focus-within) {
@@ -33,6 +36,13 @@ pyro-controls .control-button:hover svg,
 pyro-controls .control-button:focus svg {
   width: 96px;
   height: 96px;
+}
+
+pyro-controls .fullscreen-icon {
+  display: inline;
+}
+pyro-controls .fullscreen-exit-icon {
+  display: none;
 }
 
 pyro-presentation:not(:fullscreen) .fullscreen-icon,
