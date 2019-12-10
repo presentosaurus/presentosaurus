@@ -2,12 +2,14 @@
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property    | Attribute   | Description | Type               | Default     |
 | ----------- | ----------- | ----------- | ------------------ | ----------- |
 | `numbering` | `numbering` |             | `boolean`          | `undefined` |
 | `options`   | `options`   |             | `object \| string` | `undefined` |
+
 
 ## Dependencies
 
@@ -17,7 +19,6 @@
 - [pyro-controls](../controls)
 
 ### Graph
-
 ```mermaid
 graph TD;
   pyro-presentation --> pyro-provider
@@ -25,6 +26,6 @@ graph TD;
   style pyro-presentation fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
----
+----------------------------------------------
 
-_Built with [StencilJS](https://stenciljs.com/)_
+*Built with [StencilJS](https://stenciljs.com/)*
