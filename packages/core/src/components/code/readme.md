@@ -2,6 +2,7 @@
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property         | Attribute         | Description | Type      | Default     |
@@ -11,12 +12,14 @@
 | `lineNumbers`    | `line-numbers`    |             | `boolean` | `undefined` |
 | `src`            | `src`             |             | `string`  | `undefined` |
 
+
 ## Events
 
 | Event         | Description | Type               |
 | ------------- | ----------- | ------------------ |
 | `injectProps` |             | `CustomEvent<any>` |
 
----
 
-_Built with [StencilJS](https://stenciljs.com/)_
+----------------------------------------------
+
+*Built with [StencilJS](https://stenciljs.com/)*
