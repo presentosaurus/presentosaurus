@@ -12,7 +12,8 @@
   "unpkg": "dist/pyro/pyro.js",
   "files": [
     "dist/",
-    "loader/"
+    "loader/",
+    "www/"
   ],
   "scripts": {
     "dev": "stencil build --dev --watch --serve",
