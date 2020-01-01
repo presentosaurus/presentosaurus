@@ -1,5 +1,6 @@
 import { CommandModule } from "yargs";
 import browserSync from "browser-sync";
+import { join, dirname } from "path";
 import { replaceExt, transform } from "../transform";
 
 const command: CommandModule<{}, { slides: string }> = {
@@ -23,7 +24,10 @@ const command: CommandModule<{}, { slides: string }> = {
       startPath: replaceExt(argv.slides, ".html"),
       reloadOnRestart: true,
       logFileChanges: true,
-      server: true,
+      server: [
+        ".",
+        join(dirname(require.resolve("@pyroslides/core")), "../www")
+      ],
       files: [
         {
           match: [argv.slides, "pyroconfig.yaml", "pyroconfig.toml"],

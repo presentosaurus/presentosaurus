@@ -19,9 +19,11 @@
     "typescript": "3.7.4"
   },
   "dependencies": {
+    "@pyroslides/core": "0.0.0",
     "@pyroslides/parser": "0.0.0",
     "browser-sync": "2.26.7",
     "chalk": "3.0.0",
+    "deepmerge": "4.2.2",
     "toml": "3.0.0",
     "yaml": "1.7.2",
     "yargs": "15.0.2"
