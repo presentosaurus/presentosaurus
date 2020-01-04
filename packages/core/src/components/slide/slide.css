@@ -10,9 +10,6 @@ pyro-slide {
   justify-content: center;
   color: var(--color-text-primary);
   background-color: var(--color-background);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
   font-size: 4rem;
 }
 
@@ -33,26 +30,6 @@ pyro-slide-content {
   height: 100rem;
   width: calc(100rem * 16 / 9);
   padding: var(--slide-content-padding);
-}
-
-pyro-slide > .slide-title {
-  position: absolute;
-  top: var(--slide-content-padding);
-  left: var(--slide-content-padding);
-}
-
-pyro-slide > .slide-title h2 {
-  margin: 0;
-}
-
-pyro-slide > iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  z-index: 2;
 }
 
 pyro-slide blockquote {

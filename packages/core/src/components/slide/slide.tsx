@@ -1,15 +1,10 @@
-import { Component, h, Host, Prop, Event, EventEmitter } from "@stencil/core";
+import { Component, h, Host, Event, EventEmitter } from "@stencil/core";
 
 @Component({
   tag: "pyro-slide",
   styleUrl: "slide.css"
 })
 export class Slide {
-  @Prop() slideTitle: string;
-  @Prop() backgroundColor: string;
-  @Prop() backgroundImage: string;
-  @Prop() backgroundIframe: string;
-
   @Event() injectProps: EventEmitter;
 
   componentWillLoad() {
@@ -17,22 +12,11 @@ export class Slide {
   }
 
   render() {
-    const imageUrl = `url("${this.backgroundImage}")`;
-    const style = {
-      backgroundColor: this.backgroundColor,
-      backgroundImage: this.backgroundImage && imageUrl
-    };
     return (
-      <Host style={style}>
-        <div class="slide-title">
-          <slot name="slide-title">
-            <h2>{this.slideTitle}</h2>
-          </slot>
-        </div>
+      <Host>
         <pyro-slide-content>
           <slot />
         </pyro-slide-content>
-        {this.backgroundIframe && <iframe src={this.backgroundIframe} />}
       </Host>
     );
   }

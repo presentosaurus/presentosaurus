@@ -26,12 +26,7 @@ export namespace Components {
   interface PyroProvider {
     state: { [key: string]: any };
   }
-  interface PyroSlide {
-    backgroundColor: string;
-    backgroundIframe: string;
-    backgroundImage: string;
-    slideTitle: string;
-  }
+  interface PyroSlide {}
 }
 
 declare global {
@@ -118,11 +113,7 @@ declare namespace LocalJSX {
     state?: { [key: string]: any };
   }
   interface PyroSlide {
-    backgroundColor?: string;
-    backgroundIframe?: string;
-    backgroundImage?: string;
     onInjectProps?: (event: CustomEvent<any>) => void;
-    slideTitle?: string;
   }
 
   interface IntrinsicElements {
