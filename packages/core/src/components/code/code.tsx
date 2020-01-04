@@ -4,7 +4,8 @@ import "prismjs/plugins/line-numbers/prism-line-numbers.min";
 import "prismjs/plugins/line-highlight/prism-line-highlight.min";
 import "prismjs/plugins/autoloader/prism-autoloader.min";
 
-Prism.plugins.autoloader.languages_path = "prismjs/components/";
+Prism.plugins.autoloader.languages_path =
+  "https://cdn.jsdelivr.net/npm/prismjs@1.17.1/components/";
 
 @Component({
   tag: "pyro-code",

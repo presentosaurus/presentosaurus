@@ -10,6 +10,8 @@ update_configs:
     ignored_updates:
       - match:
           dependency_name: "@storybook/*"
+      - match:
+          dependency_name: "prismjs"
     commit_message:
       prefix: fix
       prefix_development: chore
