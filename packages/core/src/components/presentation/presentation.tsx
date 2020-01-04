@@ -23,7 +23,6 @@ const changeActiveIndex = (change: number) =>
   styleUrl: "presentation.css"
 })
 export class Presentation {
-  @Prop() numbering: boolean;
   @Prop() options: object | string;
 
   @State() innerOptions: object = {};

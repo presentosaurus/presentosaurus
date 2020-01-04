@@ -35,18 +35,6 @@ pyro-slide-content {
   padding: var(--slide-content-padding);
 }
 
-pyro-presentation[numbering] > pyro-slide::after {
-  counter-increment: slidenumber;
-  content: counter(slidenumber);
-  position: absolute;
-  bottom: var(--slide-content-padding);
-  right: var(--slide-content-padding);
-}
-
-pyro-slide[no-number]::after {
-  display: none;
-}
-
 pyro-slide > .slide-title {
   position: absolute;
   top: var(--slide-content-padding);
