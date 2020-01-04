@@ -27,7 +27,7 @@ export const transform = (path: string) => {
     : tomlConfigExists
     ? toml.parse(readFileSync(tomlConfigPath, { encoding: "utf8" }))
     : {};
-  const options = merge(defaultOptions, configOptions);
+  const options = merge(defaultOptions, configOptions || {});
   const content = readFileSync(path, { encoding: "utf8" });
   const parser = extname(path) === ".md" ? mdToHtml : adocToHtml;
   const html = parser(content, options, true);
