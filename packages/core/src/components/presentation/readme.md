@@ -5,10 +5,9 @@
 
 ## Properties
 
-| Property    | Attribute   | Description | Type               | Default     |
-| ----------- | ----------- | ----------- | ------------------ | ----------- |
-| `numbering` | `numbering` |             | `boolean`          | `undefined` |
-| `options`   | `options`   |             | `object \| string` | `undefined` |
+| Property  | Attribute | Description | Type               | Default     |
+| --------- | --------- | ----------- | ------------------ | ----------- |
+| `options` | `options` |             | `object \| string` | `undefined` |
 
 
 ## Dependencies

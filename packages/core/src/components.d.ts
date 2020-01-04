@@ -21,7 +21,6 @@ export namespace Components {
     inline: boolean;
   }
   interface PyroPresentation {
-    numbering: boolean;
     options: object | string;
   }
   interface PyroProvider {
@@ -113,7 +112,6 @@ declare namespace LocalJSX {
     onInjectProps?: (event: CustomEvent<any>) => void;
   }
   interface PyroPresentation {
-    numbering?: boolean;
     options?: object | string;
   }
   interface PyroProvider {
