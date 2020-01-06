@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "name": "@pyroslides/example-asciidoc",
+  "version": "0.0.0",
+  "description": "Pyroslides asciidoc example",
+  "scripts": {
+    "start": "pyro start index.adoc",
+    "build": "pyro build index.adoc"
+  },
+  "devDependencies": {
+    "@pyroslides/cli": "0.0.0"
+  }
+}
