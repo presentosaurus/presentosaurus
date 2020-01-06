@@ -11,3 +11,17 @@ Wuff
 == Slide Two
 
 A Great Story
+
+[stem] 
+++++ 
+sqrt(4) = 2
+++++
+
+== Slide Three
+
+[source, js]
+----
+const add = (a, b) => {
+  return a + b;
+};
+----
