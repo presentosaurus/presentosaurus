@@ -25,6 +25,7 @@ pyro-slide-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   position: relative;
   box-sizing: border-box;
   height: 100rem;
