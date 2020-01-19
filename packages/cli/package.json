@@ -1,10 +1,10 @@
 {
-  "name": "@pyroslides/cli",
+  "name": "@presentosaurus/cli",
   "version": "0.0.0",
-  "description": "Pyroslides CLI",
+  "description": "Presentosaurus CLI",
   "main": "lib/cli.js",
   "bin": {
-    "pyro": "lib/cli.js"
+    "presentosaurus": "lib/cli.js"
   },
   "files": [
     "lib",
@@ -19,8 +19,8 @@
     "typescript": "3.7.5"
   },
   "dependencies": {
-    "@pyroslides/core": "0.0.0",
-    "@pyroslides/parser": "0.0.0",
+    "@presentosaurus/core": "0.0.0",
+    "@presentosaurus/parser": "0.0.0",
     "browser-sync": "2.26.7",
     "chalk": "3.0.0",
     "deepmerge": "4.2.2",

@@ -3,7 +3,7 @@
 import yargs from "yargs";
 
 yargs
-  .scriptName("pyro")
+  .scriptName("presentosaurus")
   .commandDir("cmds")
   .demandCommand()
   .help().argv;

@@ -1,4 +1,4 @@
-# pyro-controls
+# ps-controls
 
 <!-- Auto Generated Below -->
 
@@ -16,13 +16,13 @@
 
 ### Used by
 
- - [pyro-presentation](../presentation)
+ - [ps-presentation](../presentation)
 
 ### Graph
 ```mermaid
 graph TD;
-  pyro-presentation --> pyro-controls
-  style pyro-controls fill:#f9f,stroke:#333,stroke-width:4px
+  ps-presentation --> ps-controls
+  style ps-controls fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

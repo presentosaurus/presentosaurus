@@ -1,5 +1,5 @@
 {
-  "name": "pyroslides",
+  "name": "presentosaurus",
   "private": true,
   "workspaces": [
     "packages/*",
@@ -23,10 +23,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/miguel-sc/pyro.git"
+    "url": "git+https://github.com/miguel-sc/presentosaurus.git"
   },
   "author": "Miguel Santos Correa <mail@miguelsantoscorrea.com>",
-  "homepage": "https://github.com/miguel-sc/pyro#readme",
+  "homepage": "https://github.com/miguel-sc/presentosaurus#readme",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",

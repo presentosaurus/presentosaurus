@@ -7,7 +7,7 @@ import {
 } from "./icons";
 
 @Component({
-  tag: "pyro-controls",
+  tag: "ps-controls",
   styleUrl: "controls.css"
 })
 export class Controls {

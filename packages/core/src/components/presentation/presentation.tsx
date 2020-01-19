@@ -19,7 +19,7 @@ const changeActiveIndex = (change: number) =>
   setActiveIndex(getActiveIndex() + change);
 
 @Component({
-  tag: "pyro-presentation",
+  tag: "ps-presentation",
   styleUrl: "presentation.css"
 })
 export class Presentation {
@@ -120,10 +120,10 @@ export class Presentation {
   render() {
     return (
       <Host tabindex="0">
-        <pyro-provider state={this.innerOptions}>
+        <ps-provider state={this.innerOptions}>
           <slot />
-        </pyro-provider>
-        <pyro-controls></pyro-controls>
+        </ps-provider>
+        <ps-controls></ps-controls>
       </Host>
     );
   }

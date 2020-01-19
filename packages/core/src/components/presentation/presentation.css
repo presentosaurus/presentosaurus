@@ -1,9 +1,9 @@
-pyro-presentation {
+ps-presentation {
   display: block;
   counter-reset: slidenumber;
   position: relative;
 }
 
-pyro-presentation.inactive:fullscreen {
+ps-presentation.inactive:fullscreen {
   cursor: none;
 }

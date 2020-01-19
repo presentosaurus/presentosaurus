@@ -9,7 +9,7 @@ const code = (h, node) => {
   };
 
   return h(node.position, "pre", [
-    h(node, "pyro-code", props, [u("text", value)])
+    h(node, "ps-code", props, [u("text", value)])
   ]);
 };
 
@@ -19,7 +19,7 @@ const math = (h, node) => {
     expression: value
   };
 
-  return h(node.position, "pyro-math", props);
+  return h(node.position, "ps-math", props);
 };
 
 const inlineMath = (h, node) => {
@@ -29,7 +29,7 @@ const inlineMath = (h, node) => {
     inline: true
   };
 
-  return h(node.position, "pyro-math", props);
+  return h(node.position, "ps-math", props);
 };
 
 export const handlers = {

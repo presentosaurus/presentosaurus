@@ -8,121 +8,115 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 
 export namespace Components {
-  interface PyroCode {
+  interface PsCode {
     highlightLines: string;
     language: string;
     lineNumbers: boolean;
     src: string;
   }
-  interface PyroControls {}
-  interface PyroMath {
+  interface PsControls {}
+  interface PsMath {
     asciiMath: boolean;
     expression: string;
     inline: boolean;
   }
-  interface PyroPresentation {
+  interface PsPresentation {
     options: object | string;
   }
-  interface PyroProvider {
+  interface PsProvider {
     state: { [key: string]: any };
   }
-  interface PyroSlide {}
+  interface PsSlide {}
 }
 
 declare global {
-  interface HTMLPyroCodeElement
-    extends Components.PyroCode,
-      HTMLStencilElement {}
-  var HTMLPyroCodeElement: {
-    prototype: HTMLPyroCodeElement;
-    new (): HTMLPyroCodeElement;
+  interface HTMLPsCodeElement extends Components.PsCode, HTMLStencilElement {}
+  var HTMLPsCodeElement: {
+    prototype: HTMLPsCodeElement;
+    new (): HTMLPsCodeElement;
   };
 
-  interface HTMLPyroControlsElement
-    extends Components.PyroControls,
+  interface HTMLPsControlsElement
+    extends Components.PsControls,
       HTMLStencilElement {}
-  var HTMLPyroControlsElement: {
-    prototype: HTMLPyroControlsElement;
-    new (): HTMLPyroControlsElement;
+  var HTMLPsControlsElement: {
+    prototype: HTMLPsControlsElement;
+    new (): HTMLPsControlsElement;
   };
 
-  interface HTMLPyroMathElement
-    extends Components.PyroMath,
-      HTMLStencilElement {}
-  var HTMLPyroMathElement: {
-    prototype: HTMLPyroMathElement;
-    new (): HTMLPyroMathElement;
+  interface HTMLPsMathElement extends Components.PsMath, HTMLStencilElement {}
+  var HTMLPsMathElement: {
+    prototype: HTMLPsMathElement;
+    new (): HTMLPsMathElement;
   };
 
-  interface HTMLPyroPresentationElement
-    extends Components.PyroPresentation,
+  interface HTMLPsPresentationElement
+    extends Components.PsPresentation,
       HTMLStencilElement {}
-  var HTMLPyroPresentationElement: {
-    prototype: HTMLPyroPresentationElement;
-    new (): HTMLPyroPresentationElement;
+  var HTMLPsPresentationElement: {
+    prototype: HTMLPsPresentationElement;
+    new (): HTMLPsPresentationElement;
   };
 
-  interface HTMLPyroProviderElement
-    extends Components.PyroProvider,
+  interface HTMLPsProviderElement
+    extends Components.PsProvider,
       HTMLStencilElement {}
-  var HTMLPyroProviderElement: {
-    prototype: HTMLPyroProviderElement;
-    new (): HTMLPyroProviderElement;
+  var HTMLPsProviderElement: {
+    prototype: HTMLPsProviderElement;
+    new (): HTMLPsProviderElement;
   };
 
-  interface HTMLPyroSlideElement
-    extends Components.PyroSlide,
-      HTMLStencilElement {}
-  var HTMLPyroSlideElement: {
-    prototype: HTMLPyroSlideElement;
-    new (): HTMLPyroSlideElement;
+  interface HTMLPsSlideElement extends Components.PsSlide, HTMLStencilElement {}
+  var HTMLPsSlideElement: {
+    prototype: HTMLPsSlideElement;
+    new (): HTMLPsSlideElement;
   };
   interface HTMLElementTagNameMap {
-    "pyro-code": HTMLPyroCodeElement;
-    "pyro-controls": HTMLPyroControlsElement;
-    "pyro-math": HTMLPyroMathElement;
-    "pyro-presentation": HTMLPyroPresentationElement;
-    "pyro-provider": HTMLPyroProviderElement;
-    "pyro-slide": HTMLPyroSlideElement;
+    "ps-code": HTMLPsCodeElement;
+    "ps-controls": HTMLPsControlsElement;
+    "ps-math": HTMLPsMathElement;
+    "ps-presentation": HTMLPsPresentationElement;
+    "ps-provider": HTMLPsProviderElement;
+    "ps-slide": HTMLPsSlideElement;
   }
 }
 
 declare namespace LocalJSX {
-  interface PyroCode {
+  interface PsCode {
     highlightLines?: string;
     language?: string;
     lineNumbers?: boolean;
     onInjectProps?: (event: CustomEvent<any>) => void;
     src?: string;
   }
-  interface PyroControls {
+  interface PsControls {
     onNextSlide?: (event: CustomEvent<any>) => void;
     onPreviousSlide?: (event: CustomEvent<any>) => void;
     onToggleFullscreen?: (event: CustomEvent<any>) => void;
   }
-  interface PyroMath {
+  interface PsMath {
     asciiMath?: boolean;
     expression?: string;
     inline?: boolean;
     onInjectProps?: (event: CustomEvent<any>) => void;
   }
-  interface PyroPresentation {
+  interface PsPresentation {
     options?: object | string;
   }
-  interface PyroProvider {
+  interface PsProvider {
     state?: { [key: string]: any };
   }
-  interface PyroSlide {
+  interface PsSlide {
     onInjectProps?: (event: CustomEvent<any>) => void;
   }
 
   interface IntrinsicElements {
-    "pyro-code": PyroCode;
-    "pyro-controls": PyroControls;
-    "pyro-math": PyroMath;
-    "pyro-presentation": PyroPresentation;
-    "pyro-provider": PyroProvider;
-    "pyro-slide": PyroSlide;
+    "ps-code": PsCode;
+    "ps-controls": PsControls;
+    "ps-math": PsMath;
+    "ps-presentation": PsPresentation;
+    "ps-provider": PsProvider;
+    "ps-slide": PsSlide;
   }
 }
 
@@ -131,18 +125,15 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
-      "pyro-code": LocalJSX.PyroCode &
-        JSXBase.HTMLAttributes<HTMLPyroCodeElement>;
-      "pyro-controls": LocalJSX.PyroControls &
-        JSXBase.HTMLAttributes<HTMLPyroControlsElement>;
-      "pyro-math": LocalJSX.PyroMath &
-        JSXBase.HTMLAttributes<HTMLPyroMathElement>;
-      "pyro-presentation": LocalJSX.PyroPresentation &
-        JSXBase.HTMLAttributes<HTMLPyroPresentationElement>;
-      "pyro-provider": LocalJSX.PyroProvider &
-        JSXBase.HTMLAttributes<HTMLPyroProviderElement>;
-      "pyro-slide": LocalJSX.PyroSlide &
-        JSXBase.HTMLAttributes<HTMLPyroSlideElement>;
+      "ps-code": LocalJSX.PsCode & JSXBase.HTMLAttributes<HTMLPsCodeElement>;
+      "ps-controls": LocalJSX.PsControls &
+        JSXBase.HTMLAttributes<HTMLPsControlsElement>;
+      "ps-math": LocalJSX.PsMath & JSXBase.HTMLAttributes<HTMLPsMathElement>;
+      "ps-presentation": LocalJSX.PsPresentation &
+        JSXBase.HTMLAttributes<HTMLPsPresentationElement>;
+      "ps-provider": LocalJSX.PsProvider &
+        JSXBase.HTMLAttributes<HTMLPsProviderElement>;
+      "ps-slide": LocalJSX.PsSlide & JSXBase.HTMLAttributes<HTMLPsSlideElement>;
     }
   }
 }

@@ -1,4 +1,4 @@
-# pyro-presentation
+# ps-presentation
 
 <!-- Auto Generated Below -->
 
@@ -14,15 +14,15 @@
 
 ### Depends on
 
-- [pyro-provider](../provider)
-- [pyro-controls](../controls)
+- [ps-provider](../provider)
+- [ps-controls](../controls)
 
 ### Graph
 ```mermaid
 graph TD;
-  pyro-presentation --> pyro-provider
-  pyro-presentation --> pyro-controls
-  style pyro-presentation fill:#f9f,stroke:#333,stroke-width:4px
+  ps-presentation --> ps-provider
+  ps-presentation --> ps-controls
+  style ps-presentation fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

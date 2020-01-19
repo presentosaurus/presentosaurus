@@ -1,20 +1,20 @@
-pyro-controls {
+ps-controls {
   display: flex;
   transition: opacity 0.5s;
 }
 
-pyro-presentation pyro-controls {
+ps-presentation ps-controls {
   position: absolute;
   z-index: 10;
   bottom: 0;
   right: 0;
 }
 
-pyro-presentation.inactive:fullscreen pyro-controls:not(:focus-within) {
+ps-presentation.inactive:fullscreen ps-controls:not(:focus-within) {
   opacity: 0;
 }
 
-pyro-controls .control-button {
+ps-controls .control-button {
   background: none;
   border: none;
   display: flex;
@@ -24,33 +24,33 @@ pyro-controls .control-button {
   padding: 0;
 }
 
-pyro-controls .control-button svg {
+ps-controls .control-button svg {
   fill: var(--color-text-primary);
   width: 72px;
   height: 72px;
   transition: width 0.3s, height 0.3s;
 }
 
-pyro-controls .control-button,
-pyro-controls .control-button:hover svg,
-pyro-controls .control-button:focus svg {
+ps-controls .control-button,
+ps-controls .control-button:hover svg,
+ps-controls .control-button:focus svg {
   width: 96px;
   height: 96px;
 }
 
-pyro-controls .fullscreen-icon {
+ps-controls .fullscreen-icon {
   display: inline;
 }
-pyro-controls .fullscreen-exit-icon {
+ps-controls .fullscreen-exit-icon {
   display: none;
 }
 
-pyro-presentation:not(:fullscreen) .fullscreen-icon,
-pyro-presentation:fullscreen .fullscreen-exit-icon {
+ps-presentation:not(:fullscreen) .fullscreen-icon,
+ps-presentation:fullscreen .fullscreen-exit-icon {
   display: inline;
 }
 
-pyro-presentation:fullscreen .fullscreen-icon,
-pyro-presentation:not(:fullscreen) .fullscreen-exit-icon {
+ps-presentation:fullscreen .fullscreen-icon,
+ps-presentation:not(:fullscreen) .fullscreen-exit-icon {
   display: none;
 }
