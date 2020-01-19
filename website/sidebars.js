@@ -1,5 +1,5 @@
 module.exports = {
   docs: {
-    Pyro: ["getting-started", "markdown", "asciidoc", "configuration"]
+    Presentosaurus: ["getting-started", "markdown", "asciidoc", "configuration"]
   }
 };

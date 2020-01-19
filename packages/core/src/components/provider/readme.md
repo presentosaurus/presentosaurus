@@ -1,4 +1,4 @@
-# pyro-provider
+# ps-provider
 
 <!-- Auto Generated Below -->
 
@@ -14,13 +14,13 @@
 
 ### Used by
 
- - [pyro-presentation](../presentation)
+ - [ps-presentation](../presentation)
 
 ### Graph
 ```mermaid
 graph TD;
-  pyro-presentation --> pyro-provider
-  style pyro-provider fill:#f9f,stroke:#333,stroke-width:4px
+  ps-presentation --> ps-provider
+  style ps-provider fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

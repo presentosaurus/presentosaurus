@@ -1,4 +1,4 @@
-pyro-slide {
+ps-slide {
   position: absolute;
   top: 0;
   left: 0;
@@ -13,15 +13,15 @@ pyro-slide {
   font-size: 4rem;
 }
 
-pyro-slide.hydrated {
+ps-slide.hydrated {
   visibility: hidden;
 }
 
-pyro-slide.active.hydrated {
+ps-slide.active.hydrated {
   visibility: visible;
 }
 
-pyro-slide-content {
+ps-slide-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,19 +33,19 @@ pyro-slide-content {
   padding: var(--slide-content-padding);
 }
 
-pyro-slide blockquote {
+ps-slide blockquote {
   margin-inline-start: 0;
   margin-inline-end: 0;
 }
 
-pyro-slide blockquote p::before {
+ps-slide blockquote p::before {
   content: "\201C";
 }
 
-pyro-slide blockquote p::after {
+ps-slide blockquote p::after {
   content: "\201D";
 }
 
-pyro-slide blockquote footer:before {
+ps-slide blockquote footer:before {
   content: "—";
 }

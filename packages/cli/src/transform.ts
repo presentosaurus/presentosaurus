@@ -1,15 +1,15 @@
 import { readFileSync, writeFileSync, existsSync } from "fs";
 import { join, dirname, basename, extname, resolve } from "path";
-import { mdToHtml, adocToHtml } from "@pyroslides/parser";
+import { mdToHtml, adocToHtml } from "@presentosaurus/parser";
 import merge from "deepmerge";
 import yaml from "yaml";
 import toml from "toml";
 
 const defaultOptions = {
   document: {
-    title: "Pyro",
-    js: ["build/pyro.js"],
-    css: ["build/pyro.css"]
+    title: "Presentosaurus",
+    js: ["build/presentosaurus.js"],
+    css: ["build/presentosaurus.css"]
   }
 };
 
@@ -18,9 +18,15 @@ export const replaceExt = (path: string, ext: string) => {
 };
 
 export const transform = (path: string) => {
-  const yamlConfigPath = join(dirname(resolve(path)), "pyroconfig.yaml");
+  const yamlConfigPath = join(
+    dirname(resolve(path)),
+    "presentosaurusconfig.yaml"
+  );
   const yamlConfigExists = existsSync(yamlConfigPath);
-  const tomlConfigPath = join(dirname(resolve(path)), "pyroconfig.toml");
+  const tomlConfigPath = join(
+    dirname(resolve(path)),
+    "presentosaurusconfig.toml"
+  );
   const tomlConfigExists = existsSync(tomlConfigPath);
   const configOptions = yamlConfigExists
     ? yaml.parse(readFileSync(yamlConfigPath, { encoding: "utf8" }))

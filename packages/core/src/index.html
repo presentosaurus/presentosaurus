@@ -6,32 +6,32 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
     />
-    <title>Pyro</title>
-    <link rel="stylesheet" href="/build/pyro.css" />
-    <script type="module" src="/build/pyro.esm.js"></script>
-    <script nomodule src="/build/pyro.js"></script>
+    <title>Presentosaurus</title>
+    <link rel="stylesheet" href="/build/presentosaurus.css" />
+    <script type="module" src="/build/presentosaurus.esm.js"></script>
+    <script nomodule src="/build/presentosaurus.js"></script>
   </head>
   <body>
-    <pyro-presentation
+    <ps-presentation
       data-theme="dark"
       options='{"code": {"lineNumbers": true}}'
     >
-      <pyro-slide>
-        <pyro-code src="/assets/fizzbuzz.ts"></pyro-code>
-      </pyro-slide>
-      <pyro-slide>
-        <pyro-math
+      <ps-slide>
+        <ps-code src="/assets/fizzbuzz.ts"></ps-code>
+      </ps-slide>
+      <ps-slide>
+        <ps-math
           expression="f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi"
-        ></pyro-math>
-        <pyro-math
+        ></ps-math>
+        <ps-math
           expression="x = (-b +- sqrt(b^2-4ac)) / (2a)"
           ascii-math
-        ></pyro-math>
-        <pyro-math
+        ></ps-math>
+        <ps-math
           expression="\ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-}"
-        ></pyro-math>
-      </pyro-slide>
-      <pyro-slide>
+        ></ps-math>
+      </ps-slide>
+      <ps-slide>
         <blockquote cite="https://www.huxley.net/bnw/four.html">
           <p>
             Words can be like X-rays, if you use them properly—they’ll go
@@ -39,7 +39,7 @@
           </p>
           <footer>Aldous Huxley, <cite>Brave New World</cite></footer>
         </blockquote>
-      </pyro-slide>
-    </pyro-presentation>
+      </ps-slide>
+    </ps-presentation>
   </body>
 </html>

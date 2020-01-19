@@ -1,7 +1,7 @@
 {
-  "name": "@pyroslides/parser",
+  "name": "@presentosaurus/parser",
   "version": "0.0.0",
-  "description": "Pyroslides parser",
+  "description": "Presentosaurus parser",
   "main": "lib/index.js",
   "files": [
     "lib"

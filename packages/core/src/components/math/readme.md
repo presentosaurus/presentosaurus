@@ -1,4 +1,4 @@
-# pyro-math
+# ps-math
 
 <!-- Auto Generated Below -->
 

@@ -1,7 +1,7 @@
 {
-  "name": "@pyroslides/core",
+  "name": "@presentosaurus/core",
   "version": "0.0.0",
-  "description": "Pyroslides webcomponents",
+  "description": "Presentosaurus webcomponents",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",
@@ -9,7 +9,7 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/pyro/pyro.js",
+  "unpkg": "dist/presentosaurus/presentosaurus.js",
   "files": [
     "dist/",
     "loader/",

@@ -26,11 +26,15 @@ const command: CommandModule<{}, { slides: string }> = {
       logFileChanges: true,
       server: [
         ".",
-        join(dirname(require.resolve("@pyroslides/core")), "../www")
+        join(dirname(require.resolve("@presentosaurus/core")), "../www")
       ],
       files: [
         {
-          match: [argv.slides, "pyroconfig.yaml", "pyroconfig.toml"],
+          match: [
+            argv.slides,
+            "presentosaurusconfig.yaml",
+            "presentosaurusconfig.toml"
+          ],
           fn: () => {
             transform(argv.slides);
             bs.reload();

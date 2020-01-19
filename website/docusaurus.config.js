@@ -1,14 +1,14 @@
 module.exports = {
-  title: "Pyro",
+  title: "Presentosaurus",
   tagline: "The tagline of my site",
   url: "https://your-docusaurus-test-site.com",
   baseUrl: "/",
   favicon: "img/favicon.ico",
-  organizationName: "pyroslides", // Usually your GitHub org/user name.
-  projectName: "pyro", // Usually your repo name.
+  organizationName: "presentosaurus", // Usually your GitHub org/user name.
+  projectName: "presentosaurus", // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: "Pyro",
+      title: "Presentosaurus",
       logo: {
         alt: "Logo",
         src: "img/logo.svg"
@@ -17,7 +17,7 @@ module.exports = {
         { to: "docs/configuration", label: "Docs", position: "left" },
         { to: "blog", label: "Blog", position: "left" },
         {
-          href: "https://github.com/miguel-sc/pyro",
+          href: "https://github.com/miguel-sc/presentosaurus",
           label: "GitHub",
           position: "right"
         }

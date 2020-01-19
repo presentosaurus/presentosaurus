@@ -8,7 +8,7 @@ Prism.plugins.autoloader.languages_path =
   "https://cdn.jsdelivr.net/npm/prismjs@1.17.1/components/";
 
 @Component({
-  tag: "pyro-code",
+  tag: "ps-code",
   styleUrl: "code.css"
 })
 export class Code {

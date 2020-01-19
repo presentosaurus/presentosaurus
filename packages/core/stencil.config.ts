@@ -1,7 +1,7 @@
 import { Config } from "@stencil/core";
 
 export const config: Config = {
-  namespace: "pyro",
+  namespace: "presentosaurus",
   globalStyle: "src/globals/variables.css",
   outputTargets: [
     {
