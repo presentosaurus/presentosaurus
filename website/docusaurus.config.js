@@ -1,7 +1,7 @@
 module.exports = {
   title: "Presentosaurus",
   tagline: "The tagline of my site",
-  url: "https://your-docusaurus-test-site.com",
+  url: "https://presentosaurus.com",
   baseUrl: "/",
   favicon: "img/favicon.ico",
   organizationName: "presentosaurus", // Usually your GitHub org/user name.
@@ -9,13 +9,8 @@ module.exports = {
   themeConfig: {
     navbar: {
       title: "Presentosaurus",
-      logo: {
-        alt: "Logo",
-        src: "img/logo.svg"
-      },
       links: [
         { to: "docs/configuration", label: "Docs", position: "left" },
-        { to: "blog", label: "Blog", position: "left" },
         {
           href: "https://github.com/miguel-sc/presentosaurus",
           label: "GitHub",
@@ -34,30 +29,8 @@ module.exports = {
               to: "docs/configuration"
             }
           ]
-        },
-        {
-          title: "Community",
-          items: [
-            {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus"
-            }
-          ]
-        },
-        {
-          title: "Social",
-          items: [
-            {
-              label: "Blog",
-              to: "blog"
-            }
-          ]
         }
       ],
-      logo: {
-        alt: "Facebook Open Source Logo",
-        src: "https://docusaurus.io/img/oss_logo.png"
-      },
       copyright: `Copyright © ${new Date().getFullYear()} Miguel Santos Correa`
     }
   },
