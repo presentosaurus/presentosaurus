@@ -5,8 +5,8 @@ title: Configuration
 
 You can configure your slides with one of two options:
 
-- `presentosaurusconfig.yaml` in [YAML](https://github.com/yaml/yaml)
-- `presentosaurusconfig.toml` in [TOML](https://github.com/toml-lang/toml)
+- `presentosaurus.config.yaml` in [YAML](https://github.com/yaml/yaml)
+- `presentosaurus.config.toml` in [TOML](https://github.com/toml-lang/toml)
 
 ## Example
 

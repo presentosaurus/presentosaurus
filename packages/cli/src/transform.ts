@@ -20,12 +20,12 @@ export const replaceExt = (path: string, ext: string) => {
 export const transform = (path: string) => {
   const yamlConfigPath = join(
     dirname(resolve(path)),
-    "presentosaurusconfig.yaml"
+    "presentosaurus.config.yaml"
   );
   const yamlConfigExists = existsSync(yamlConfigPath);
   const tomlConfigPath = join(
     dirname(resolve(path)),
-    "presentosaurusconfig.toml"
+    "presentosaurus.config.toml"
   );
   const tomlConfigExists = existsSync(tomlConfigPath);
   const configOptions = yamlConfigExists

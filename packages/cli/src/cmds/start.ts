@@ -32,8 +32,8 @@ const command: CommandModule<{}, { slides: string }> = {
         {
           match: [
             argv.slides,
-            "presentosaurusconfig.yaml",
-            "presentosaurusconfig.toml"
+            "presentosaurus.config.yaml",
+            "presentosaurus.config.toml"
           ],
           fn: () => {
             transform(argv.slides);
