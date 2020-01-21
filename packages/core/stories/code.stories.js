@@ -3,22 +3,22 @@ import { text, boolean } from "@storybook/addon-knobs";
 
 export default {
   title: "Code",
-  component: "pyro-code"
+  component: "ps-code"
 };
 
 export const Code = () => html`
-  <pyro-code
+  <ps-code
     language="${text("language", "js")}"
     line-numbers=${boolean("line-numbers", true)}
-    >${text("code", "const add = (a, b) => a + b")}</pyro-code
+    >${text("code", "const add = (a, b) => a + b")}</ps-code
   >
 `;
 
 export const FromSourceFile = () => html`
-  <pyro-code
+  <ps-code
     language="${text("language", "ts")}"
     src="${text("src", "/assets/fizzbuzz.ts")}"
     line-numbers=${boolean("line-numbers", true)}
     highlight-lines="${text("highlight-lines", "2-4, 8")}"
-  ></pyro-code>
+  ></ps-code>
 `;

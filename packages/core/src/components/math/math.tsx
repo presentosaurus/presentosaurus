@@ -4,7 +4,7 @@ import "katex/dist/contrib/mhchem.min";
 import AsciiMathParser from "asciimath2tex";
 
 @Component({
-  tag: "pyro-math",
+  tag: "ps-math",
   styleUrl: "math.css"
 })
 export class Math {

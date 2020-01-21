@@ -1,13 +1,13 @@
 {
   "private": true,
-  "name": "@pyroslides/example-asciidoc",
+  "name": "@presentosaurus/example-asciidoc",
   "version": "0.0.0",
-  "description": "Pyroslides asciidoc example",
+  "description": "Presentosaurus asciidoc example",
   "scripts": {
-    "start": "pyro start index.adoc",
-    "build": "pyro build index.adoc"
+    "start": "presentosaurus start index.adoc",
+    "build": "presentosaurus build index.adoc"
   },
   "devDependencies": {
-    "@pyroslides/cli": "0.0.0"
+    "@presentosaurus/cli": "0.0.0"
   }
 }

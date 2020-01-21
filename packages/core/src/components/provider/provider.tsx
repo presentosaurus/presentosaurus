@@ -13,7 +13,7 @@ type SubscribeCallback<T> = (el: any, prop: keyof T) => () => void;
 type T = { [key: string]: any };
 
 @Component({
-  tag: "pyro-provider"
+  tag: "ps-provider"
 })
 export class Provider {
   @Prop() state: { [key: string]: any } = {};
@@ -23,7 +23,7 @@ export class Provider {
   @Listen("injectProps")
   handleSubscription(event: CustomEvent) {
     const tagName: string = (event.target as any).tagName.toLowerCase();
-    const prop = tagName.replace(/^(pyro-)/, "");
+    const prop = tagName.replace(/^(ps-)/, "");
     const unsubscribe = this.subscribe(event.detail, prop);
     const disconnectedCallback = event.detail.disconnectedCallback;
 

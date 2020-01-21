@@ -6,22 +6,22 @@ export const adocConverter = options => ({
   convert: (node, transform) => {
     switch (node.getNodeName()) {
       case "document":
-        return `<pyro-presentation options='${JSON.stringify(
+        return `<ps-presentation options='${JSON.stringify(
           options
-        )}'>${node.getContent()}</pyro-presentation>`;
+        )}'>${node.getContent()}</ps-presentation>`;
       case "section":
-        return `<pyro-slide><h2>${node.getTitle()}</h2>${node.getContent()}</pyro-slide>`;
+        return `<ps-slide><h2>${node.getTitle()}</h2>${node.getContent()}</ps-slide>`;
       case "listing":
-        return `<pre><pyro-code language="${node.getAttribute(
+        return `<pre><ps-code language="${node.getAttribute(
           "language"
-        )}">${node.getContent()}</pyro-code></pre>`;
+        )}">${node.getContent()}</ps-code></pre>`;
       case "stem":
-        return `<pyro-math ascii-math=${node.getAttribute("style") ===
-          "asciimath"} expression="${node.getContent()}"></pyro-math>`;
+        return `<ps-math ascii-math=${node.getAttribute("style") ===
+          "asciimath"} expression="${node.getContent()}"></ps-math>`;
       case "inline_quoted":
         if (node.type === "asciimath" || node.type === "latexmath") {
-          return `<pyro-math inline ascii-math=${node.type ===
-            "asciimath"} expression="${node.text}"></pyro-math>`;
+          return `<ps-math inline ascii-math=${node.type ===
+            "asciimath"} expression="${node.text}"></ps-math>`;
         } else {
           return htmlConverter.convert(node, transform);
         }

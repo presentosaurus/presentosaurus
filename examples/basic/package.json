@@ -1,13 +1,13 @@
 {
   "private": true,
-  "name": "@pyroslides/example-basic",
+  "name": "@presentosaurus/example-basic",
   "version": "0.0.0",
-  "description": "Pyroslides basic example",
+  "description": "Presentosaurus basic example",
   "scripts": {
-    "start": "pyro start index.md",
-    "build": "pyro build index.md"
+    "start": "presentosaurus start index.md",
+    "build": "presentosaurus build index.md"
   },
   "devDependencies": {
-    "@pyroslides/cli": "0.0.0"
+    "@presentosaurus/cli": "0.0.0"
   }
 }

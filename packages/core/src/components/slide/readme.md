@@ -1,4 +1,4 @@
-# pyro-slide
+# ps-slide
 
 <!-- Auto Generated Below -->
 

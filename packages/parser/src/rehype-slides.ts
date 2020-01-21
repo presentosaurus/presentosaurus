@@ -13,10 +13,10 @@ const splitByTag = (children, tag: string) =>
 export const slides = options => {
   return tree => {
     const slideNodes = splitByTag(tree.children, "hr").map(children =>
-      h("pyro-slide", children)
+      h("ps-slide", children)
     );
     const presentationNode = h(
-      "pyro-presentation",
+      "ps-presentation",
       { options: JSON.stringify(options) },
       slideNodes
     );

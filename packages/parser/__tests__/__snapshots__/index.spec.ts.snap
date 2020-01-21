@@ -2,28 +2,28 @@
 
 exports[`should render snapshot of empty.adoc 1`] = `
 "
-<pyro-presentation options=\\"{}\\"></pyro-presentation>
+<ps-presentation options=\\"{}\\"></ps-presentation>
 "
 `;
 
 exports[`should render snapshot of empty.md 1`] = `
 "
-<pyro-presentation options=\\"{}\\">
-  <pyro-slide></pyro-slide>
-</pyro-presentation>
+<ps-presentation options=\\"{}\\">
+  <ps-slide></ps-slide>
+</ps-presentation>
 "
 `;
 
 exports[`should render snapshot of sample.adoc 1`] = `
 "
-<pyro-presentation options=\\"{}\\">
-  <pyro-slide>
+<ps-presentation options=\\"{}\\">
+  <ps-slide>
     <h2>Title Slide</h2>
     <div class=\\"paragraph\\">
       <p>Wuff</p>
     </div>
-  </pyro-slide>
-  <pyro-slide>
+  </ps-slide>
+  <ps-slide>
     <h2>Slide One</h2>
     <div class=\\"ulist\\">
       <ul>
@@ -38,49 +38,49 @@ exports[`should render snapshot of sample.adoc 1`] = `
         </li>
       </ul>
     </div>
-  </pyro-slide>
-  <pyro-slide>
+  </ps-slide>
+  <ps-slide>
     <h2>Slide Two</h2>
     <div class=\\"paragraph\\">
       <p>A Great Story</p>
     </div>
-    <pyro-math ascii-math=\\"true\\" expression=\\"sqrt(4) = 2\\"></pyro-math>
-  </pyro-slide>
-  <pyro-slide>
+    <ps-math ascii-math=\\"true\\" expression=\\"sqrt(4) = 2\\"></ps-math>
+  </ps-slide>
+  <ps-slide>
     <h2>Slide Three</h2>
-    <pre><pyro-code language=\\"js\\">const add = (a, b) => {
+    <pre><ps-code language=\\"js\\">const add = (a, b) => {
   return a + b;
-};</pyro-code></pre>
-  </pyro-slide>
-</pyro-presentation>
+};</ps-code></pre>
+  </ps-slide>
+</ps-presentation>
 "
 `;
 
 exports[`should render snapshot of sample.md 1`] = `
 "
-<pyro-presentation options=\\"{&#x22;code&#x22;:{&#x22;lineNumbers&#x22;:true},&#x22;math&#x22;:{&#x22;asciiMath&#x22;:true}}\\">
-  <pyro-slide>
+<ps-presentation options=\\"{&#x22;code&#x22;:{&#x22;lineNumbers&#x22;:true},&#x22;math&#x22;:{&#x22;asciiMath&#x22;:true}}\\">
+  <ps-slide>
     <h1>Sample Presentation</h1>
-  </pyro-slide>
-  <pyro-slide>
+  </ps-slide>
+  <ps-slide>
     <h2>Title</h2>
     <ul>
       <li>meow</li>
       <li>moo</li>
     </ul>
-  </pyro-slide>
-  <pyro-slide>
+  </ps-slide>
+  <ps-slide>
     <p>
-      <pyro-math expression=\\"\\\\frac{1}{2}\\" inline></pyro-math>
+      <ps-math expression=\\"\\\\frac{1}{2}\\" inline></ps-math>
     </p>
-    <pyro-math expression=\\"\\\\int f\\"></pyro-math>
-  </pyro-slide>
-  <pyro-slide>
-    <pre><pyro-code language=\\"js\\">const add = (a, b) => {
+    <ps-math expression=\\"\\\\int f\\"></ps-math>
+  </ps-slide>
+  <ps-slide>
+    <pre><ps-code language=\\"js\\">const add = (a, b) => {
   return a + b;
 };
-</pyro-code></pre>
-  </pyro-slide>
-</pyro-presentation>
+</ps-code></pre>
+  </ps-slide>
+</ps-presentation>
 "
 `;

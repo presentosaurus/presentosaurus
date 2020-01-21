@@ -1,7 +1,7 @@
 import { Component, h, Host, Event, EventEmitter } from "@stencil/core";
 
 @Component({
-  tag: "pyro-slide",
+  tag: "ps-slide",
   styleUrl: "slide.css"
 })
 export class Slide {
@@ -14,9 +14,9 @@ export class Slide {
   render() {
     return (
       <Host>
-        <pyro-slide-content>
+        <ps-slide-content>
           <slot />
-        </pyro-slide-content>
+        </ps-slide-content>
       </Host>
     );
   }
