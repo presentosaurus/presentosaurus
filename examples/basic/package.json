@@ -1,13 +1,13 @@
 {
   "private": true,
   "name": "@presentosaurus/example-basic",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Presentosaurus basic example",
   "scripts": {
     "start": "presentosaurus start index.md",
     "build": "presentosaurus build index.md"
   },
   "devDependencies": {
-    "@presentosaurus/cli": "0.1.1"
+    "@presentosaurus/cli": "0.1.2"
   }
 }

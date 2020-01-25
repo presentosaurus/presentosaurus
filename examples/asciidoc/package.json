@@ -1,13 +1,13 @@
 {
   "private": true,
   "name": "@presentosaurus/example-asciidoc",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Presentosaurus asciidoc example",
   "scripts": {
     "start": "presentosaurus start index.adoc",
     "build": "presentosaurus build index.adoc"
   },
   "devDependencies": {
-    "@presentosaurus/cli": "0.1.1"
+    "@presentosaurus/cli": "0.1.2"
   }
 }
