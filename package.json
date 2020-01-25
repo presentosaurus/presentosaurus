@@ -25,10 +25,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/miguel-sc/presentosaurus.git"
+    "url": "git+https://github.com/presentosaurus/presentosaurus.git"
   },
   "author": "Miguel Santos Correa <mail@miguelsantoscorrea.com>",
-  "homepage": "https://github.com/miguel-sc/presentosaurus#readme",
+  "homepage": "https://github.com/presentosaurus/presentosaurus#readme",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",

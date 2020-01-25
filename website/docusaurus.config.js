@@ -12,7 +12,7 @@ module.exports = {
       links: [
         { to: "docs/configuration", label: "Docs", position: "left" },
         {
-          href: "https://github.com/miguel-sc/presentosaurus",
+          href: "https://github.com/presentosaurus/presentosaurus",
           label: "GitHub",
           position: "right"
         }
