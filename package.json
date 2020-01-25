@@ -13,7 +13,7 @@
     "test": "lerna run test",
     "release": "lerna version --yes --create-release github",
     "prelerna-publish": "yarn build",
-    "lerna-publish": "lerna publish from-git --access public --yes"
+    "lerna-publish": "lerna publish from-git --yes"
   },
   "devDependencies": {
     "@commitlint/cli": "8.3.5",

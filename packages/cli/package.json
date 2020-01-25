@@ -14,6 +14,9 @@
     "start": "tsc -w",
     "build": "tsc"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@types/browser-sync": "2.26.1",
     "typescript": "3.7.5"

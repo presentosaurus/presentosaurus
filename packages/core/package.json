@@ -23,6 +23,9 @@
     "build:stencil": "stencil build --docs",
     "build:storybook": "build-storybook -o build -s www"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@stencil/core": "1.8.6",
     "@storybook/addon-a11y": "5.3.0-beta.19",
