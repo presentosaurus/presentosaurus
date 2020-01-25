@@ -1,0 +1,25 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: yarn install --frozen-lockfile
+      - name: git config user
+        run: |
+          git config --global user.email "miguelsantoscorrea@gmail.com"
+          git config --global user.name "Miguel Santos Correa"
+      - run: yarn release
+        env:
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN_MIGUEL}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN_MIGUEL}}

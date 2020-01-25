@@ -13,6 +13,5 @@ update_configs:
       - match:
           dependency_name: "prismjs"
     commit_message:
-      prefix: fix
-      prefix_development: chore
+      prefix: chore
       include_scope: true

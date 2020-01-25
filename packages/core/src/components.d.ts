@@ -5,40 +5,42 @@
  * It contains typing information for all components that exist in this project.
  */
 
-import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+
+import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
+
 
 export namespace Components {
   interface PsCode {
-    highlightLines: string;
-    language: string;
-    lineNumbers: boolean;
-    src: string;
+    'highlightLines': string;
+    'language': string;
+    'lineNumbers': boolean;
+    'src': string;
   }
   interface PsControls {}
   interface PsMath {
-    asciiMath: boolean;
-    expression: string;
-    inline: boolean;
+    'asciiMath': boolean;
+    'expression': string;
+    'inline': boolean;
   }
   interface PsPresentation {
-    options: object | string;
+    'options': object | string;
   }
   interface PsProvider {
-    state: { [key: string]: any };
+    'state': { [key: string]: any };
   }
   interface PsSlide {}
 }
 
 declare global {
+
+
   interface HTMLPsCodeElement extends Components.PsCode, HTMLStencilElement {}
   var HTMLPsCodeElement: {
     prototype: HTMLPsCodeElement;
     new (): HTMLPsCodeElement;
   };
 
-  interface HTMLPsControlsElement
-    extends Components.PsControls,
-      HTMLStencilElement {}
+  interface HTMLPsControlsElement extends Components.PsControls, HTMLStencilElement {}
   var HTMLPsControlsElement: {
     prototype: HTMLPsControlsElement;
     new (): HTMLPsControlsElement;
@@ -50,17 +52,13 @@ declare global {
     new (): HTMLPsMathElement;
   };
 
-  interface HTMLPsPresentationElement
-    extends Components.PsPresentation,
-      HTMLStencilElement {}
+  interface HTMLPsPresentationElement extends Components.PsPresentation, HTMLStencilElement {}
   var HTMLPsPresentationElement: {
     prototype: HTMLPsPresentationElement;
     new (): HTMLPsPresentationElement;
   };
 
-  interface HTMLPsProviderElement
-    extends Components.PsProvider,
-      HTMLStencilElement {}
+  interface HTMLPsProviderElement extends Components.PsProvider, HTMLStencilElement {}
   var HTMLPsProviderElement: {
     prototype: HTMLPsProviderElement;
     new (): HTMLPsProviderElement;
@@ -72,68 +70,68 @@ declare global {
     new (): HTMLPsSlideElement;
   };
   interface HTMLElementTagNameMap {
-    "ps-code": HTMLPsCodeElement;
-    "ps-controls": HTMLPsControlsElement;
-    "ps-math": HTMLPsMathElement;
-    "ps-presentation": HTMLPsPresentationElement;
-    "ps-provider": HTMLPsProviderElement;
-    "ps-slide": HTMLPsSlideElement;
+    'ps-code': HTMLPsCodeElement;
+    'ps-controls': HTMLPsControlsElement;
+    'ps-math': HTMLPsMathElement;
+    'ps-presentation': HTMLPsPresentationElement;
+    'ps-provider': HTMLPsProviderElement;
+    'ps-slide': HTMLPsSlideElement;
   }
 }
 
 declare namespace LocalJSX {
   interface PsCode {
-    highlightLines?: string;
-    language?: string;
-    lineNumbers?: boolean;
-    onInjectProps?: (event: CustomEvent<any>) => void;
-    src?: string;
+    'highlightLines'?: string;
+    'language'?: string;
+    'lineNumbers'?: boolean;
+    'onInjectProps'?: (event: CustomEvent<any>) => void;
+    'src'?: string;
   }
   interface PsControls {
-    onNextSlide?: (event: CustomEvent<any>) => void;
-    onPreviousSlide?: (event: CustomEvent<any>) => void;
-    onToggleFullscreen?: (event: CustomEvent<any>) => void;
+    'onNextSlide'?: (event: CustomEvent<any>) => void;
+    'onPreviousSlide'?: (event: CustomEvent<any>) => void;
+    'onToggleFullscreen'?: (event: CustomEvent<any>) => void;
   }
   interface PsMath {
-    asciiMath?: boolean;
-    expression?: string;
-    inline?: boolean;
-    onInjectProps?: (event: CustomEvent<any>) => void;
+    'asciiMath'?: boolean;
+    'expression'?: string;
+    'inline'?: boolean;
+    'onInjectProps'?: (event: CustomEvent<any>) => void;
   }
   interface PsPresentation {
-    options?: object | string;
+    'options'?: object | string;
   }
   interface PsProvider {
-    state?: { [key: string]: any };
+    'state'?: { [key: string]: any };
   }
   interface PsSlide {
-    onInjectProps?: (event: CustomEvent<any>) => void;
+    'onInjectProps'?: (event: CustomEvent<any>) => void;
   }
 
   interface IntrinsicElements {
-    "ps-code": PsCode;
-    "ps-controls": PsControls;
-    "ps-math": PsMath;
-    "ps-presentation": PsPresentation;
-    "ps-provider": PsProvider;
-    "ps-slide": PsSlide;
+    'ps-code': PsCode;
+    'ps-controls': PsControls;
+    'ps-math': PsMath;
+    'ps-presentation': PsPresentation;
+    'ps-provider': PsProvider;
+    'ps-slide': PsSlide;
   }
 }
 
 export { LocalJSX as JSX };
 
+
 declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
-      "ps-code": LocalJSX.PsCode & JSXBase.HTMLAttributes<HTMLPsCodeElement>;
-      "ps-controls": LocalJSX.PsControls &
-        JSXBase.HTMLAttributes<HTMLPsControlsElement>;
-      "ps-math": LocalJSX.PsMath & JSXBase.HTMLAttributes<HTMLPsMathElement>;
-      "ps-presentation": LocalJSX.PsPresentation &
-        JSXBase.HTMLAttributes<HTMLPsPresentationElement>;
-      "ps-provider": LocalJSX.PsProvider &
-        JSXBase.HTMLAttributes<HTMLPsProviderElement>;
-      "ps-slide": LocalJSX.PsSlide & JSXBase.HTMLAttributes<HTMLPsSlideElement>;
+      'ps-code': LocalJSX.PsCode & JSXBase.HTMLAttributes<HTMLPsCodeElement>;
+      'ps-controls': LocalJSX.PsControls & JSXBase.HTMLAttributes<HTMLPsControlsElement>;
+      'ps-math': LocalJSX.PsMath & JSXBase.HTMLAttributes<HTMLPsMathElement>;
+      'ps-presentation': LocalJSX.PsPresentation & JSXBase.HTMLAttributes<HTMLPsPresentationElement>;
+      'ps-provider': LocalJSX.PsProvider & JSXBase.HTMLAttributes<HTMLPsProviderElement>;
+      'ps-slide': LocalJSX.PsSlide & JSXBase.HTMLAttributes<HTMLPsSlideElement>;
     }
   }
 }
+
+
