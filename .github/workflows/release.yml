@@ -16,3 +16,6 @@ jobs:
           node-version: 12
       - run: yarn install --frozen-lockfile
       - run: yarn release
+        env:
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN_MIGUEL}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN_MIGUEL}}
