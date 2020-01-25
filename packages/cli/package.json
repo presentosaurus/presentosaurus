@@ -17,6 +17,10 @@
   "publishConfig": {
     "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/presentosaurus/presentosaurus.git"
+  },
   "devDependencies": {
     "@types/browser-sync": "2.26.1",
     "typescript": "3.7.5"
