@@ -7,11 +7,14 @@
     "examples/*"
   ],
   "scripts": {
-    "bootstrap": "lerna bootstrap",
     "postinstall": "lerna link",
     "start": "lerna run start --parallel",
     "build": "lerna run build",
-    "test": "lerna run test"
+    "test": "lerna run test",
+    "prerelease": "yarn build",
+    "release": "lerna version --yes --create-release github",
+    "prelerna-publish": "yarn build",
+    "lerna-publish": "lerna publish from-package --yes"
   },
   "devDependencies": {
     "@commitlint/cli": "8.3.5",

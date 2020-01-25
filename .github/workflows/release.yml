@@ -1,12 +1,12 @@
-name: CI
+name: Release
 
 on:
-  pull_request:
+  push:
     branches:
       - master
 
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -15,5 +15,4 @@ jobs:
         with:
           node-version: 12
       - run: yarn install --frozen-lockfile
-      - run: yarn test
-      - run: yarn build
+      - run: yarn release
