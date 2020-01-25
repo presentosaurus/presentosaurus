@@ -11,10 +11,9 @@
     "start": "lerna run start --parallel",
     "build": "lerna run build",
     "test": "lerna run test",
-    "prerelease": "yarn build",
     "release": "lerna version --yes --create-release github",
     "prelerna-publish": "yarn build",
-    "lerna-publish": "lerna publish from-package --yes"
+    "lerna-publish": "lerna publish from-git --access public --yes"
   },
   "devDependencies": {
     "@commitlint/cli": "8.3.5",
