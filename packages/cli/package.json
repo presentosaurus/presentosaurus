@@ -1,6 +1,6 @@
 {
   "name": "@presentosaurus/cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Presentosaurus CLI",
   "main": "lib/cli.js",
   "bin": {
@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@presentosaurus/core": "0.1.0",
-    "@presentosaurus/parser": "0.1.0",
+    "@presentosaurus/parser": "0.1.1",
     "browser-sync": "2.26.7",
     "chalk": "3.0.0",
     "deepmerge": "4.2.2",
