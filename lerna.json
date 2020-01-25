@@ -7,8 +7,8 @@
     "version": {
       "conventionalCommits": true,
       "exact": true,
-      "message": "chore(release): publish",
-      "ignoreChanges": ["CHANGELOG.md"]
+      "message": "chore(release): publish"
     }
-  }
+  },
+  "ignoreChanges": ["**/__tests__/**", "CHANGELOG.md"]
 }
