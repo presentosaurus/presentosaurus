@@ -1,5 +1,5 @@
 {
-  "name": "presentosaurus",
+  "name": "@presentosaurus/presentosaurus",
   "private": true,
   "workspaces": [
     "packages/*",
