@@ -33,6 +33,6 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: "@presentosaurus"
       - run: yarn install --frozen-lockfile
-      - run: yarn lerna-publish
+      - run: yarn lerna-publish --registry https://npm.pkg.github.com/
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
