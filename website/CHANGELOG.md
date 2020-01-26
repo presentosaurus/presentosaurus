@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.2](https://github.com/presentosaurus/presentosaurus/compare/@presentosaurus/website@0.1.1...@presentosaurus/website@0.1.2) (2020-01-26)
+
+
+### Bug Fixes
+
+* **website:** change tagline ([#198](https://github.com/presentosaurus/presentosaurus/issues/198)) ([be3832f](https://github.com/presentosaurus/presentosaurus/commit/be3832f))
+
+
+
+
+
 ## [0.1.1](https://github.com/presentosaurus/presentosaurus/compare/@presentosaurus/website@0.1.0...@presentosaurus/website@0.1.1) (2020-01-25)
 
 **Note:** Version bump only for package @presentosaurus/website
