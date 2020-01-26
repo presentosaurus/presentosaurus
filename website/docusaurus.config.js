@@ -1,6 +1,6 @@
 module.exports = {
   title: "Presentosaurus",
-  tagline: "The tagline of my site",
+  tagline: "Under development",
   url: "https://presentosaurus.com",
   baseUrl: "/",
   favicon: "img/favicon.ico",
