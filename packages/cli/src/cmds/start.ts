@@ -26,7 +26,7 @@ const command: CommandModule<{}, { slides: string }> = {
       logFileChanges: true,
       server: [
         ".",
-        join(dirname(require.resolve("@presentosaurus/core")), "../www")
+        join(dirname(require.resolve("@presentosaurus/core")), "presentosaurus")
       ],
       files: [
         {
