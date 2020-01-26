@@ -8,8 +8,8 @@ import toml from "toml";
 const defaultOptions = {
   document: {
     title: "Presentosaurus",
-    js: ["build/presentosaurus.js"],
-    css: ["build/presentosaurus.css"]
+    js: ["presentosaurus.js"],
+    css: ["presentosaurus.css"]
   }
 };
 

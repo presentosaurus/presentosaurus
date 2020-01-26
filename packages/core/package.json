@@ -12,8 +12,7 @@
   "unpkg": "dist/presentosaurus/presentosaurus.js",
   "files": [
     "dist/",
-    "loader/",
-    "www/"
+    "loader/"
   ],
   "scripts": {
     "dev": "stencil build --dev --watch --serve",
