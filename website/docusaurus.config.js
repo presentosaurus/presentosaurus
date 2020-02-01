@@ -10,7 +10,7 @@ module.exports = {
     navbar: {
       title: "Presentosaurus",
       links: [
-        { to: "docs/configuration", label: "Docs", position: "left" },
+        { to: "docs/getting-started", label: "Docs", position: "left" },
         {
           href: "https://github.com/presentosaurus/presentosaurus",
           label: "GitHub",
@@ -26,7 +26,7 @@ module.exports = {
           items: [
             {
               label: "Docs",
-              to: "docs/configuration"
+              to: "docs/getting-started"
             }
           ]
         }
