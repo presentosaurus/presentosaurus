@@ -13,4 +13,7 @@
   --ifm-color-primary-light: rgb(70, 203, 174);
   --ifm-color-primary-lighter: rgb(102, 212, 189);
   --ifm-color-primary-lightest: rgb(146, 224, 208);
+  --ifm-navbar-shadow: none;
+  --ifm-contents-border-color: none;
+  --ifm-font-size-base: 1rem;
 }
